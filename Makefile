@@ -27,7 +27,7 @@ $(TARGET_BIN) : $(SOURCES:.cpp=.o)
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 
-# make clean make game-tests, ./bin/GameTests
+# Testing iteration is make clean, make game-tests, ./bin/GameTests
 GAME_TESTS_SOURCES = src/tests/GameTests.cpp \
 		src/Game.cpp
 game-tests : $(GAME_TESTS_SOURCES:.cpp=.o)
