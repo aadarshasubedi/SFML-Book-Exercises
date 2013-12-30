@@ -26,10 +26,10 @@ $(TARGET_BIN) : $(SOURCES:.cpp=.o)
 .cpp.o: 
 	$(CXX) $(CXXFLAGS) $< -o $@
 
-GAME_TESTS_SOURCES = src/tests/GameTests.cpp \
+game-tests : $(src/tests/GameTests.cpp \
 		src/Game.cpp
-game-tests : $(GAME_TESTS_SOURCES:.cpp=.o)
-	$(CXX) $^ $(LDFLAGS) -lgtest -pthread -o bin/GameTests 
+		:.cpp=.o)
+	$(CXX) $^ $(LDFLAGS) -lgtest -pthread -o ./bin/GameTests 
 	
 install:
 	install -d $(DATA_PREFIX)
