@@ -6,7 +6,7 @@
 
 TEST(GameTests, testEagleLoaded) { 
     sf::Texture mTexture;
-    bool result = mTexture.loadFromFile("../gfx/textures/eagle.png");
+    bool result = mTexture.loadFromFile("./gfx/textures/eagle.png");
     ASSERT_EQ(true, result);
 }
   

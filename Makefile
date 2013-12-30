@@ -26,6 +26,8 @@ $(TARGET_BIN) : $(SOURCES:.cpp=.o)
 .cpp.o: 
 	$(CXX) $(CXXFLAGS) $< -o $@
 
+
+# make clean make game-tests, ./bin/GameTests
 GAME_TESTS_SOURCES = src/tests/GameTests.cpp \
 		src/Game.cpp
 game-tests : $(GAME_TESTS_SOURCES:.cpp=.o)
@@ -45,5 +47,5 @@ make_dirs :
 	mkdir -p $(BIN_DIR)
 
 clean:
-	rm -rf build && rm -rf bin
+	rm -f bin/* && rm $(shell find . -name '*.o') 
 
