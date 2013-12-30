@@ -1,0 +1,2 @@
+mkdir -p ./bin
+g++ src/Main.o src/Game.o -L/usr/local/lib -lsfml-graphics -lsfml-window -lsfml-system -Wl,-rpath=/usr/local/lib:-L/usr/lib64 -lGLEW -Wl,-rpath=/usr/lib64 -o bin/BasicGame
