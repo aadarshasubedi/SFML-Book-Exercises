@@ -13,8 +13,8 @@ CXXFLAGS = -Wall -c -std=c++11 $(SFML_INCLUDE)
 LDFLAGS = $(SFML_LIB):$(GLEW_LIB)
 
 BIN_DIR = ./bin
-SOURCES = src/Main.cpp \
-    src/Game.cpp
+SOURCES = src/Main.cpp #\
+    # src/Game.cpp
 
 TARGET_BIN = $(BIN_DIR)/BasicGame
 
@@ -32,6 +32,11 @@ GAME_TESTS_SOURCES = src/tests/GameTests.cpp \
 		src/Game.cpp
 game-tests : $(GAME_TESTS_SOURCES:.cpp=.o)
 	$(CXX) $^ $(LDFLAGS) -lgtest -pthread -o bin/GameTests 
+	
+RESOURCE_TESTS_SOURCES = src/tests/ResourceTests.cpp
+
+resource-tests: $(GAME_TESTS_SOURCES:.cpp=.o)
+	$(CXX) $^ $(LDFLAGS) -lgtest -pthread -o bin/ResourceTests
 	
 install:
 	install -d $(DATA_PREFIX)

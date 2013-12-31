@@ -18,11 +18,12 @@ Game::Game(): mWindow(sf::VideoMode(640, 480), "SFML Application"),
         mIsMovingLeft(false),
         mIsMovingRight(false)
 {
-    if (!mTexture.loadFromFile("gfx/textures/eagle.png")){
+    if (!mTexture.loadFromFile("./gfx/textures/Eagle.png")){
         printf("");
     }
     mPlayer.setTexture(mTexture);
-    mPlayer.setPosition(0.f, 0.f);
+    mPlayer.setPosition(100.f, 100.f);
+    
 }
 
 void Game::run(){
