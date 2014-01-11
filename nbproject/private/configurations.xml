@@ -13,11 +13,25 @@
           <in>GameTests.cpp</in>
           <in>ResourceTests.cpp</in>
         </df>
+        <in>Aircraft.cpp</in>
+        <in>Aircraft.hpp</in>
+        <in>Entity.cpp</in>
+        <in>Entity.hpp</in>
+        <in>Foreach.hpp</in>
         <in>Game.cpp</in>
         <in>Game.hpp</in>
         <in>Main.cpp</in>
         <in>ResourceHolder.hpp</in>
         <in>ResourceHolder.inl</in>
+        <in>ResourceIdentifiers.hpp</in>
+        <in>SceneNode.cpp</in>
+        <in>SceneNode.hpp</in>
+        <in>SpriteNode.cpp</in>
+        <in>SpriteNode.hpp</in>
+        <in>StringHelpers.hpp</in>
+        <in>StringHelpers.inl</in>
+        <in>World.cpp</in>
+        <in>World.hpp</in>
       </df>
     </df>
   </logicalFolder>

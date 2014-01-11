@@ -6,9 +6,13 @@
         <df name="tests">
           <in>ResourceTests.cpp</in>
         </df>
+        <in>Aircraft.cpp</in>
+        <in>Entity.cpp</in>
         <in>Game.cpp</in>
         <in>Main.cpp</in>
-        <in>ResourceHolder.inl</in>
+        <in>SceneNode.cpp</in>
+        <in>SpriteNode.cpp</in>
+        <in>World.cpp</in>
       </df>
     </df>
     <logicalFolder name="ExternalFiles"
@@ -46,6 +50,14 @@
           </ccTool>
         </makeTool>
       </makefileType>
+      <item path="src/Aircraft.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/Entity.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
       <item path="src/Game.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
@@ -54,9 +66,21 @@
         <ccTool>
         </ccTool>
       </item>
-      <item path="src/ResourceHolder.inl" ex="false" tool="3" flavor2="0">
+      <item path="src/SceneNode.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
-      <item path="src/tests/ResourceTests.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/SpriteNode.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/World.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/tests/ResourceTests.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
       </item>
     </conf>
   </confs>
