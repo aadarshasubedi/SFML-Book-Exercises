@@ -4,6 +4,7 @@
     <df root="." name="0">
       <df name="src">
         <df name="tests">
+          <in>AircraftTests.cpp</in>
           <in>ResourceTests.cpp</in>
         </df>
         <in>Aircraft.cpp</in>
@@ -77,6 +78,8 @@
       <item path="src/World.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
+      </item>
+      <item path="src/tests/AircraftTests.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/tests/ResourceTests.cpp" ex="false" tool="1" flavor2="4">
         <ccTool>

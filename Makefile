@@ -4,7 +4,8 @@ BIN_PREFIX=$(PREFIX)/bin
 DATA_PREFIX=$(PREFIX)/share/BasicGame/
 
 XX = g++
-SFML_LIB = -L/usr/local/lib -lsfml-graphics -lsfml-window -lsfml-system -Wl,-rpath=/usr/local/lib
+SFML_LIB = -L/usr/local/lib -lsfml-graphics -lsfml-window -lsfml-system \
+		   -Wl,-rpath=/usr/local/lib
 GLEW_LIB = -L/usr/lib64 -lGLEW -Wl,-rpath=/usr/lib64
 
 SFML_INCLUDE = -I/usr/local/include
@@ -13,8 +14,8 @@ CXXFLAGS = -Wall -c -std=c++11 $(SFML_INCLUDE)
 LDFLAGS = $(SFML_LIB):$(GLEW_LIB)
 
 BIN_DIR = ./bin
-SOURCES = src/Main.cpp src/Aircraft.cpp src/Entity.cpp src/Game.cpp src/SceneNode.cpp \
-    src/SpriteNode.cpp src/World.cpp
+SOURCES = src/Main.cpp src/Aircraft.cpp src/Entity.cpp src/Game.cpp \
+		  src/SceneNode.cpp src/SpriteNode.cpp src/World.cpp
 
 TARGET_BIN = $(BIN_DIR)/BasicGame
 
@@ -28,8 +29,13 @@ $(TARGET_BIN) : $(SOURCES:.cpp=.o)
 
 
 # Testing iteration is make clean, make game-tests, ./bin/GameTests
+AIRCRAFT_TESTS_SOURCES = src/tests/AircraftTests.cpp \
+    src/Aircraft.cpp src/Entity.cpp src/SceneNode.cpp
+aircraft-tests:  $(AIRCRAFT_TESTS_SOURCES:.cpp=.o)
+	$(CXX) $^ $(LDFLAGS) -lgtest -pthread -o bin/AircraftTests
+
 GAME_TESTS_SOURCES = src/tests/GameTests.cpp \
-		src/Game.cpp
+		src/Game.cpp src/Entity.cpp
 game-tests : $(GAME_TESTS_SOURCES:.cpp=.o)
 	$(CXX) $^ $(LDFLAGS) -lgtest -pthread -o bin/GameTests 
 	
