@@ -12,16 +12,16 @@ class Aircraft : public Entity {
             Eagle,
             Raptor,
         };
-
+    
+    private:
+        Type mType;
+        sf::Sprite mSprite;
+        
     public:
         Aircraft(Type type, const TextureHolder& textures);
 
     private:
         virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
-
-    private:
-        Type mType;
-        sf::Sprite mSprite;
 };
 
 #endif // BOOK_AIRCRAFT_HPP

@@ -4,8 +4,7 @@
 #include "Aircraft.hpp"
 #include "ResourceHolder.hpp"
 
-Textures::ID toTextureID(Aircraft::Type type)
-{
+Textures::ID toTextureID(Aircraft::Type type) {
     switch (type) {
         case Aircraft::Eagle:
             return Textures::Eagle;

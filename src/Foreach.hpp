@@ -7,7 +7,6 @@
 #define ID(identifier) BOOK_PP_CAT(auroraDetail_, identifier)
 #define LINE_ID(identifier) BOOK_PP_CAT(BOOK_ID(identifier), __LINE__)
 
-
 // Macro to emulate C++11 range-based for loop
 // Instead of for (decl : range) you write FOREACH(decl, range) as in the following example
 //

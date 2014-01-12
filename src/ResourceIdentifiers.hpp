@@ -2,19 +2,16 @@
 #define RESOURCEIDENTIFIERS_HPP
 
 // Forward declaration of SFML classes
-namespace sf
-{
-	class Texture;
+namespace sf {
+    class Texture;
 }
 
-namespace Textures
-{
-	enum ID
-	{
-		Eagle,
-		Raptor,
-		Desert,
-	};
+namespace Textures {
+    enum ID {
+        Eagle,
+        Raptor,
+        Desert,
+    };
 }
 
 // Forward declaration and a few type definitions
@@ -23,4 +20,4 @@ class ResourceHolder;
 
 typedef ResourceHolder<sf::Texture, Textures::ID> TextureHolder;
 
-#endif // BOOK_RESOURCEIDENTIFIERS_HPP
+#endif // RESOURCEIDENTIFIERS_HPP

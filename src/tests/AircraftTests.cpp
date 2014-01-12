@@ -17,7 +17,7 @@ TEST(AircraftTests, testEagleLoadedByTextureID) {
     textures.load(Textures::Eagle, "./gfx/textures/Eagle.png");
     std::unique_ptr<Aircraft> leader(new Aircraft(Aircraft::Eagle, textures));
     ASSERT_NE(nullptr, leader);
-    ASSERT_EQ(8, sizeof(leader))
+    ASSERT_EQ(8, sizeof(leader));
 }
  
 int main(int argc, char **argv) {

@@ -10,7 +10,7 @@ GLEW_LIB = -L/usr/lib64 -lGLEW -Wl,-rpath=/usr/lib64
 
 SFML_INCLUDE = -I/usr/local/include
 
-CXXFLAGS = -Wall -c -std=c++11 $(SFML_INCLUDE)
+CXXFLAGS = -Wall -c -g -std=c++11 $(SFML_INCLUDE)
 LDFLAGS = $(SFML_LIB):$(GLEW_LIB)
 
 BIN_DIR = ./bin

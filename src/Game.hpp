@@ -9,32 +9,30 @@
 
 #include "World.hpp"
 
-class Game : private sf::NonCopyable
-{
-	public:
-								Game();
-		void					run();
-		
+class Game : private sf::NonCopyable {
+        
+    private:
+        static const sf::Time TimePerFrame;
 
-	private:
-		void					processEvents();
-		void					update(sf::Time elapsedTime);
-		void					render();
+        sf::RenderWindow mWindow;
+        World mWorld;
 
-		void					updateStatistics(sf::Time elapsedTime);	
-		void					handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
-		
+        sf::Font mFont;
+        sf::Text mStatisticsText;
+        sf::Time mStatisticsUpdateTime;
+        std::size_t mStatisticsNumFrames;
+        
+    public:
+        Game();
+        void run();
 
-	private:
-		static const sf::Time	TimePerFrame;
+    private:
+        void processEvents();
+        void update(sf::Time elapsedTime);
+        void render();
 
-		sf::RenderWindow		mWindow;
-		World					mWorld;
-
-	  	sf::Font				mFont;
-		sf::Text				mStatisticsText;
-		sf::Time				mStatisticsUpdateTime;
-		std::size_t				mStatisticsNumFrames;
+        void updateStatistics(sf::Time elapsedTime);	
+        void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
 };
 
-#endif // BOOK_GAME_HPP
+#endif // GAME_HPP
