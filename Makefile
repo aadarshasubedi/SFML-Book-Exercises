@@ -14,8 +14,9 @@ CXXFLAGS = -Wall -c -g -std=c++11 $(SFML_INCLUDE)
 LDFLAGS = $(SFML_LIB):$(GLEW_LIB)
 
 BIN_DIR = ./bin
-SOURCES = src/Main.cpp src/Aircraft.cpp src/Entity.cpp src/Game.cpp \
-		  src/SceneNode.cpp src/SpriteNode.cpp src/World.cpp
+SOURCES = src/Main.cpp src/Aircraft.cpp src/Command.cpp src/CommandQueue.cpp \
+    src/Entity.cpp src/Game.cpp src/Player.cpp src/SceneNode.cpp \
+    src/SpriteNode.cpp src/World.cpp
 
 TARGET_BIN = $(BIN_DIR)/BasicGame
 
@@ -26,7 +27,6 @@ $(TARGET_BIN) : $(SOURCES:.cpp=.o)
 
 .cpp.o: 
 	$(CXX) $(CXXFLAGS) $< -o $@
-
 
 # Testing iteration is make clean, make game-tests, ./bin/GameTests
 AIRCRAFT_TESTS_SOURCES = src/tests/AircraftTests.cpp \

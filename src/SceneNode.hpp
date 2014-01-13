@@ -9,7 +9,11 @@
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/Graphics/Drawable.hpp>
 
-class SceneNode : public sf::Transformable, public sf::Drawable, private sf::NonCopyable {            
+#include "Category.hpp"
+
+struct Command;
+
+class SceneNode : public sf::Transformable, public sf::Drawable, private sf::NonCopyable {
     public:
         typedef std::unique_ptr<SceneNode> Ptr;
         
@@ -19,6 +23,7 @@ class SceneNode : public sf::Transformable, public sf::Drawable, private sf::Non
 
     public:
         SceneNode();
+
         void attachChild(Ptr child);
         Ptr detachChild(const SceneNode& node);
 
@@ -26,6 +31,9 @@ class SceneNode : public sf::Transformable, public sf::Drawable, private sf::Non
 
         sf::Vector2f getWorldPosition() const;
         sf::Transform getWorldTransform() const;
+
+        void onCommand(const Command& command, sf::Time dt);
+        virtual unsigned int getCategory() const;
 
     private:
         virtual void updateCurrent(sf::Time dt);

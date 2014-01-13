@@ -16,12 +16,19 @@
         </df>
         <in>Aircraft.cpp</in>
         <in>Aircraft.hpp</in>
+        <in>Category.hpp</in>
+        <in>Command.cpp</in>
+        <in>Command.hpp</in>
+        <in>CommandQueue.cpp</in>
+        <in>CommandQueue.hpp</in>
         <in>Entity.cpp</in>
         <in>Entity.hpp</in>
         <in>Foreach.hpp</in>
         <in>Game.cpp</in>
         <in>Game.hpp</in>
         <in>Main.cpp</in>
+        <in>Player.cpp</in>
+        <in>Player.hpp</in>
         <in>ResourceHolder.hpp</in>
         <in>ResourceHolder.inl</in>
         <in>ResourceIdentifiers.hpp</in>
