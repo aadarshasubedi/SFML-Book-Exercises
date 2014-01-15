@@ -14,9 +14,11 @@ CXXFLAGS = -Wall -c -g -std=c++11 $(SFML_INCLUDE)
 LDFLAGS = $(SFML_LIB):$(GLEW_LIB)
 
 BIN_DIR = ./bin
-SOURCES = src/Main.cpp src/Aircraft.cpp src/Command.cpp src/CommandQueue.cpp \
-    src/Entity.cpp src/Game.cpp src/Player.cpp src/SceneNode.cpp \
-    src/SpriteNode.cpp src/World.cpp
+SOURCES =  src/Main.cpp src/Aircraft.cpp src/Application.cpp src/Command.cpp \
+    src/CommandQueue.cpp src/Entity.cpp src/GameState.cpp src/LoadingState.cpp \
+    src/MenuState.cpp src/ParallelTask.cpp src/PauseState.cpp src/Player.cpp \
+    src/SceneNode.cpp src/SpriteNode.cpp src/State.cpp src/StateStack.cpp \
+    src/TitleState.cpp src/Utility.cpp src/World.cpp
 
 TARGET_BIN = $(BIN_DIR)/BasicGame
 

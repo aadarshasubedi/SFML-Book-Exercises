@@ -3,6 +3,7 @@
 
 #include "Aircraft.hpp"
 #include "ResourceHolder.hpp"
+#include "Utility.hpp"
 
 Textures::ID toTextureID(Aircraft::Type type) {
     switch (type) {
@@ -11,14 +12,12 @@ Textures::ID toTextureID(Aircraft::Type type) {
         case Aircraft::Raptor:
             return Textures::Raptor;
     }
-    return Textures::Eagle;
 }
 
 Aircraft::Aircraft(Type type, const TextureHolder& textures)
 : mType(type)
 , mSprite(textures.get(toTextureID(type))) {
-    sf::FloatRect bounds = mSprite.getLocalBounds();
-    mSprite.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
+    centerOrigin(mSprite);
 }
 
 void Aircraft::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const {

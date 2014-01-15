@@ -8,18 +8,23 @@
           <in>ResourceTests.cpp</in>
         </df>
         <in>Aircraft.cpp</in>
-        <in>Category.hpp</in>
+        <in>Application.cpp</in>
         <in>Command.cpp</in>
-        <in>Command.hpp</in>
         <in>CommandQueue.cpp</in>
-        <in>CommandQueue.hpp</in>
         <in>Entity.cpp</in>
-        <in>Game.cpp</in>
+        <in>GameState.cpp</in>
+        <in>LoadingState.cpp</in>
         <in>Main.cpp</in>
+        <in>MenuState.cpp</in>
+        <in>ParallelTask.cpp</in>
+        <in>PauseState.cpp</in>
         <in>Player.cpp</in>
-        <in>Player.hpp</in>
         <in>SceneNode.cpp</in>
         <in>SpriteNode.cpp</in>
+        <in>State.cpp</in>
+        <in>StateStack.cpp</in>
+        <in>TitleState.cpp</in>
+        <in>Utility.cpp</in>
         <in>World.cpp</in>
       </df>
     </df>
@@ -62,21 +67,27 @@
         <ccTool>
         </ccTool>
       </item>
-      <item path="src/Category.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/Application.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
-      <item path="src/Command.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/Command.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
-      <item path="src/Command.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="src/CommandQueue.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/CommandQueue.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/CommandQueue.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="src/Entity.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
       </item>
-      <item path="src/Game.cpp" ex="false" tool="1" flavor2="8">
+      <item path="src/GameState.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/LoadingState.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
       </item>
@@ -84,9 +95,21 @@
         <ccTool>
         </ccTool>
       </item>
-      <item path="src/Player.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/MenuState.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
-      <item path="src/Player.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/ParallelTask.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/PauseState.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/Player.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="src/SceneNode.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
@@ -96,11 +119,29 @@
         <ccTool>
         </ccTool>
       </item>
+      <item path="src/State.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/StateStack.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/TitleState.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/Utility.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
       <item path="src/World.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
       </item>
-      <item path="src/tests/AircraftTests.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/tests/AircraftTests.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="src/tests/ResourceTests.cpp" ex="false" tool="1" flavor2="4">
         <ccTool>

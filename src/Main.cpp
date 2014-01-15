@@ -1,12 +1,12 @@
 #include <stdexcept>
 #include <iostream>
 
-#include "Game.hpp"
+#include "Application.hpp"
 
 int main() {
     try {
-        Game game;
-        game.run();
+        Application app;
+        app.run();
     }
     catch (std::exception& e)  {
         std::cout << "\nEXCEPTION: " << e.what() << std::endl;

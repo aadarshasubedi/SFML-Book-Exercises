@@ -16,6 +16,8 @@
         </df>
         <in>Aircraft.cpp</in>
         <in>Aircraft.hpp</in>
+        <in>Application.cpp</in>
+        <in>Application.hpp</in>
         <in>Category.hpp</in>
         <in>Command.cpp</in>
         <in>Command.hpp</in>
@@ -24,9 +26,17 @@
         <in>Entity.cpp</in>
         <in>Entity.hpp</in>
         <in>Foreach.hpp</in>
-        <in>Game.cpp</in>
-        <in>Game.hpp</in>
+        <in>GameState.cpp</in>
+        <in>GameState.hpp</in>
+        <in>LoadingState.cpp</in>
+        <in>LoadingState.hpp</in>
         <in>Main.cpp</in>
+        <in>MenuState.cpp</in>
+        <in>MenuState.hpp</in>
+        <in>ParallelTask.cpp</in>
+        <in>ParallelTask.hpp</in>
+        <in>PauseState.cpp</in>
+        <in>PauseState.hpp</in>
         <in>Player.cpp</in>
         <in>Player.hpp</in>
         <in>ResourceHolder.hpp</in>
@@ -36,8 +46,16 @@
         <in>SceneNode.hpp</in>
         <in>SpriteNode.cpp</in>
         <in>SpriteNode.hpp</in>
-        <in>StringHelpers.hpp</in>
-        <in>StringHelpers.inl</in>
+        <in>State.cpp</in>
+        <in>State.hpp</in>
+        <in>StateIdentifiers.hpp</in>
+        <in>StateStack.cpp</in>
+        <in>StateStack.hpp</in>
+        <in>TitleState.cpp</in>
+        <in>TitleState.hpp</in>
+        <in>Utility.cpp</in>
+        <in>Utility.hpp</in>
+        <in>Utility.inl</in>
         <in>World.cpp</in>
         <in>World.hpp</in>
       </df>
