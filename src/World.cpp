@@ -30,12 +30,12 @@ void World::update(sf::Time dt) {
     // Forward commands to scene graph, adapt velocity (scrolling, diagonal correction)
     while (!mCommandQueue.isEmpty())
         mSceneGraph.onCommand(mCommandQueue.pop(), dt);
+    
     adaptPlayerVelocity();
 
     // Regular update step, adapt position (correct if outside view)
     mSceneGraph.update(dt);
     adaptPlayerPosition();
-    mSceneGraph.update(dt);
 }
 
 void World::draw() {
@@ -43,9 +43,7 @@ void World::draw() {
     mWindow.draw(mSceneGraph);
 }
 
-CommandQueue& World::getCommandQueue() {
-    return mCommandQueue;
-}
+CommandQueue& World::getCommandQueue() { return mCommandQueue; }
 
 void World::loadTextures() {
     mTextures.load(Textures::Eagle, "./gfx/textures/Eagle.png");

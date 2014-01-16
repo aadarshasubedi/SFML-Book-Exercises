@@ -18,23 +18,27 @@
         <in>Aircraft.hpp</in>
         <in>Application.cpp</in>
         <in>Application.hpp</in>
+        <in>Button.cpp</in>
+        <in>Button.hpp</in>
         <in>Category.hpp</in>
         <in>Command.cpp</in>
         <in>Command.hpp</in>
         <in>CommandQueue.cpp</in>
         <in>CommandQueue.hpp</in>
+        <in>Component.cpp</in>
+        <in>Component.hpp</in>
+        <in>Container.cpp</in>
+        <in>Container.hpp</in>
         <in>Entity.cpp</in>
         <in>Entity.hpp</in>
         <in>Foreach.hpp</in>
         <in>GameState.cpp</in>
         <in>GameState.hpp</in>
-        <in>LoadingState.cpp</in>
-        <in>LoadingState.hpp</in>
+        <in>Label.cpp</in>
+        <in>Label.hpp</in>
         <in>Main.cpp</in>
         <in>MenuState.cpp</in>
         <in>MenuState.hpp</in>
-        <in>ParallelTask.cpp</in>
-        <in>ParallelTask.hpp</in>
         <in>PauseState.cpp</in>
         <in>PauseState.hpp</in>
         <in>Player.cpp</in>
@@ -44,6 +48,8 @@
         <in>ResourceIdentifiers.hpp</in>
         <in>SceneNode.cpp</in>
         <in>SceneNode.hpp</in>
+        <in>SettingState.cpp</in>
+        <in>SettingsState.hpp</in>
         <in>SpriteNode.cpp</in>
         <in>SpriteNode.hpp</in>
         <in>State.cpp</in>

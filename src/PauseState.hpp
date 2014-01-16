@@ -5,12 +5,14 @@
 #include <SFML/Graphics/Text.hpp>
 
 #include "State.hpp"
+#include "Container.hpp"
+#include "Button.hpp"
 
 class PauseState : public State {
     private:
         sf::Sprite mBackgroundSprite;
         sf::Text mPausedText;
-        sf::Text mInstructionText;
+        GUI::Container mGUIContainer;
         
     public:
         PauseState(StateStack& stack, Context context);

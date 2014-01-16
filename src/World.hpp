@@ -17,12 +17,9 @@
 #include "Command.hpp"
 
 // Forward declaration
-namespace sf {
-    class RenderWindow;
-}
+namespace sf { class RenderWindow; }
 
 class World : private sf::NonCopyable {
-
     private:
         enum Layer {
             Background,

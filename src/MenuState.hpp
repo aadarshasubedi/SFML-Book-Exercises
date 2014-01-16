@@ -5,20 +5,13 @@
 #include <SFML/Graphics/Text.hpp>
 
 #include "State.hpp"
+#include "Container.hpp"
 
 class MenuState : public State {
-
-    private:
-        enum OptionNames  {
-            Play,
-            Exit,
-        };
         
     private:
         sf::Sprite mBackgroundSprite;
-
-        std::vector<sf::Text> mOptions;
-        std::size_t mOptionIndex;
+        GUI::Container mGUIContainer;
         
     public:
         MenuState(StateStack& stack, Context context);
@@ -26,8 +19,6 @@ class MenuState : public State {
         virtual void draw();
         virtual bool update(sf::Time dt);
         virtual bool handleEvent(const sf::Event& event);
-
-        void updateOptionText();
 };
 
 #endif // MENUSTATE_HPP

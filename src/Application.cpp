@@ -6,11 +6,12 @@
 #include "GameState.hpp"
 #include "MenuState.hpp"
 #include "PauseState.hpp"
+#include "SettingsState.hpp"
 
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
 Application::Application()
-: mWindow(sf::VideoMode(640, 480), "States", sf::Style::Close)
+: mWindow(sf::VideoMode(640, 480), "Menus", sf::Style::Close)
 , mTextures()
 , mFonts()
 , mPlayer()
@@ -22,6 +23,9 @@ Application::Application()
 
     mFonts.load(Fonts::Main, "./gfx/GF-TecmoSet1.TTF");
     mTextures.load(Textures::TitleScreen, "./gfx/textures/TitleScreen.png");
+    mTextures.load(Textures::ButtonNormal, "./gfx/textures/ButtonNormal.png");
+    mTextures.load(Textures::ButtonSelected, "./gfx/textures/ButtonSelected.png");
+    mTextures.load(Textures::ButtonPressed, "./gfx/textures/ButtonPressed.png");
 
     mStatisticsText.setFont(mFonts.get(Fonts::Main));
     mStatisticsText.setPosition(5.f, 5.f);
@@ -95,4 +99,5 @@ void Application::registerStates() {
     mStateStack.registerState<MenuState>(States::Menu);
     mStateStack.registerState<GameState>(States::Game);
     mStateStack.registerState<PauseState>(States::Pause);
+    mStateStack.registerState<SettingsState>(States::Settings);
 }
