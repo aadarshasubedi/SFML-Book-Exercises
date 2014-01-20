@@ -1,6 +1,6 @@
 # SFML 2.0 Book Excercises
 
-## Just me going through the [SFML 2.0 Game Development book][1], nothing to see here.  Just me going through chapter by chapter and applying what is read.
+### Just me going through the [SFML 2.0 Game Development book][1], nothing to see here.  Just me going through chapter by chapter and applying what is read.
 
 ### To get everything working under a Debian based system (specifically Ubuntu 13.04):
     sudo apt-get install libxmu-dev libxi-dev libopenal-dev
@@ -21,7 +21,7 @@
 
     sudo apt-get install cmake cmake-gui
 
-    # Use build tutorial here to create your make file w/Cmake:  [http://www.sfml-dev.org/tutorials/2.0/compile-with-cmake.php][2]
+    # Use build tutorial here to create your make file [here][2].
 
     cd sfml && make
     sudo -s && make install && make clean
