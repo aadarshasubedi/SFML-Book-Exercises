@@ -1,62 +1,37 @@
-===============================================
-SFML 2.0 Book Excercises
-=============================
-===============================================
+# SFML 2.0 Book Excercises
 
-Just me going through the [SFML 2.0 Game Development book][1], nothing to see here.  Just me going
-through chapter by chapter and applying what is read.
+## Just me going through the [SFML 2.0 Game Development book][1], nothing to see here.  Just me going through chapter by chapter and applying what is read.
 
-To get everything working under Ubuntu (I'm working under 13.04):
-------------------------------------------------------------------
-sudo apt-get install libxmu-dev libxi-dev libopenal-dev
+### To get everything working under a Debian based system (specifically Ubuntu 13.04):
+    sudo apt-get install libxmu-dev libxi-dev libopenal-dev
+    
+    # Download & compile the latest version of libGLEW (1.9?)
 
-**Download & compile the latest version of libGLEW (1.9?)**
+    git clone git://git.code.sf.net/p/glew/code glew
+    cd glew
+    make extensions && make
+    sudo make install
+    make clean
 
-git clone git://git.code.sf.net/p/glew/code glew
+    # Download & compile the latest version SFML (2.1)
 
-cd glew
+    git clone https://github.com/LaurentGomila/SFML  
 
-make extensions
+    # To build sfml, you will need to have CMake installed
 
-make
+    sudo apt-get install cmake cmake-gui
 
-sudo make install
+    # Use build tutorial here to create your make file w/Cmake:  [http://www.sfml-dev.org/tutorials/2.0/compile-with-cmake.php][2]
 
-make clean
+    cd sfml && make
+    sudo -s && make install && make clean
 
-**Download & compile the latest version SFML (2.1)**
-
-git clone https://github.com/LaurentGomila/SFML  
-
-**To build sfml, you will need to have CMake installed**
-
-sudo apt-get install cmake cmake-gui
-
-**Use build tutorial here to create your make file w/Cmake**:  [http://www.sfml-dev.org/tutorials/2.0/compile-with-cmake.php][2]
-
-cd sfml
-
-make
-
-sudo -s
-
-make install
-
-make clean
-
-Writing unit tests w/Google-Test (just have to run tests make clean, make <test name>, and run execute test binaries at command-line
-------------------------------------------------------------------------------------------------------------------------------------
-
-sudo apt-get install libgtest-dev
-
-cd /usr/src/gtest
-
-sudo cmake CMakeLists.txt
-
-sudo make
-
-sudo cp *.a /usr/lib  # copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
-
+### Writing unit tests w/Google-Test (just have to run tests make clean, make <test name>, and run execute test binaries at command-line
+    sudo apt-get install libgtest-dev
+    cd /usr/src/gtest
+    sudo cmake CMakeLists.txt
+    sudo make
+    sudo cp *.a /usr/lib  # copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
 
 [1]: http://www.packtpub.com/sfml-game-development/book
 [2]: http://www.sfml-dev.org/tutorials/2.0/compile-with-cmake.php

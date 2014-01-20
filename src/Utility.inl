@@ -4,3 +4,13 @@ std::string toString(const T& value) {
     stream << value;
     return stream.str();
 }
+
+template< typename T >inline
+const std::type_info& getType( T& object ) {
+    return typeid(object);
+}
+
+template< typename T >inline
+const std::type_info& getType(const T& object ) {
+    return typeid(object);
+}
