@@ -20,9 +20,7 @@ namespace GUI {
         mText.setPosition(bounds.width / 2.f, bounds.height / 2.f);
     }
 
-    void Button::setCallback(Callback callback) {
-        mCallback = std::move(callback);
-    }
+    void Button::setCallback(Callback callback) { mCallback = std::move(callback); }
 
     void Button::setText(const std::string& text) {
         mText.setString(text);
@@ -48,23 +46,23 @@ namespace GUI {
     void Button::activate() {
         Component::activate();
 
-        // If we are toggle then we should show that the button is pressed and thus "toggled".
+    // If we are toggle then we should show that the button is pressed and thus "toggled".
         if (mIsToggle)
             mSprite.setTexture(mPressedTexture);
 
         if (mCallback)
             mCallback();
 
-        // If we are not a toggle then deactivate the button since we are just momentarily activated.
+    // If we are not a toggle then deactivate the button since we are just momentarily activated.
         if (!mIsToggle)
             deactivate();
     }
 
-    void Button::deactivate()  {
+    void Button::deactivate() {
         Component::deactivate();
 
         if (mIsToggle) {
-            // Reset texture to right one depending on if we are selected or not.
+        // Reset texture to right one depending on if we are selected or not.
             if (isSelected())
                 mSprite.setTexture(mSelectedTexture);
             else
@@ -72,12 +70,11 @@ namespace GUI {
         }
     }
 
-    void Button::handleEvent(const sf::Event&)   {   }
+    void Button::handleEvent(const sf::Event&) { }
 
     void Button::draw(sf::RenderTarget& target, sf::RenderStates states) const {
         states.transform *= getTransform();
         target.draw(mSprite, states);
         target.draw(mText, states);
     }
-
 }

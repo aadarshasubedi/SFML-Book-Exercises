@@ -24,14 +24,16 @@ PauseState::PauseState(StateStack& stack, Context context)
     auto returnButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
     returnButton->setPosition(0.5f * windowSize.x - 100, 0.4f * windowSize.y + 75);
     returnButton->setText("Return");
-    returnButton->setCallback([this] () { requestStackPop(); });
+    returnButton->setCallback([this] () {
+        requestStackPop();
+    });
 
     auto backToMenuButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
     backToMenuButton->setPosition(0.5f * windowSize.x - 100, 0.4f * windowSize.y + 125);
     backToMenuButton->setText("Back to menu");
     backToMenuButton->setCallback([this] () {
-            requestStateClear();
-            requestStackPush(States::Menu);
+        requestStateClear();
+        requestStackPush(States::Menu);
     });
 
     mGUIContainer.pack(returnButton);
@@ -55,6 +57,5 @@ bool PauseState::update(sf::Time) { return false; }
 
 bool PauseState::handleEvent(const sf::Event& event) {
     mGUIContainer.handleEvent(event);
-
     return false;
 }

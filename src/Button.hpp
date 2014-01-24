@@ -1,6 +1,11 @@
 #ifndef BUTTON_HPP
 #define BUTTON_HPP
 
+#include <vector>
+#include <string>
+#include <memory>
+#include <functional>
+
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 
@@ -13,7 +18,7 @@ namespace GUI {
         public:
             typedef std::shared_ptr<Button> Ptr;
             typedef std::function<void()> Callback;
-                
+
         private:
             Callback mCallback;
             const sf::Texture& mNormalTexture;
@@ -22,8 +27,8 @@ namespace GUI {
             sf::Sprite mSprite;
             sf::Text mText;
             bool mIsToggle;
-
-	public:
+            
+        public:
             Button(const FontHolder& fonts, const TextureHolder& textures);
 
             void setCallback(Callback callback);
@@ -38,7 +43,7 @@ namespace GUI {
             virtual void deactivate();
 
             virtual void handleEvent(const sf::Event& event);
-
+            
         private:
             virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     };

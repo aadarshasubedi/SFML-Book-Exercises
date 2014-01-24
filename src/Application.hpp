@@ -10,6 +10,7 @@
 #include "Player.hpp"
 #include "StateStack.hpp"
 
+
 class Application {
 
     private:
@@ -28,7 +29,7 @@ class Application {
         
     public:
         Application();
-        void run();		
+        void run();
 
     private:
         void processInput();

@@ -1,15 +1,14 @@
 #include "Component.hpp"
-
 namespace GUI {
     Component::Component()
     : mIsSelected(false)
-    , mIsActive(false) { }
+    , mIsActive(false) {}
 
-    Component::~Component() { }
+    Component::~Component(){ }
 
-    bool Component::isSelected() const  { return mIsSelected; }
+    bool Component::isSelected() const { return mIsSelected; }
 
-    void Component::select() { mIsSelected = true;  }
+    void Component::select() { mIsSelected = true; }
 
     void Component::deselect() { mIsSelected = false; }
 

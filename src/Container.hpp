@@ -10,11 +10,11 @@ namespace GUI {
     class Container : public Component {
         public:
             typedef std::shared_ptr<Container> Ptr;
-
+        
         private:
-            std::vector<Component::Ptr>	 mChildren;
-            int	mSelectedChild;
-
+            std::vector<Component::Ptr> mChildren;
+            int mSelectedChild;
+            
         public:
             Container();
 

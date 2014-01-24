@@ -5,8 +5,7 @@
 
 #include "SceneNode.hpp"
 
-class SpriteNode : public SceneNode
-{
+class SpriteNode : public SceneNode {
     private:
         sf::Sprite mSprite;
         

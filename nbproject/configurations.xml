@@ -10,27 +10,27 @@
         <in>Aircraft.cpp</in>
         <in>Application.cpp</in>
         <in>Button.cpp</in>
-        <in>Button.hpp</in>
         <in>Command.cpp</in>
         <in>CommandQueue.cpp</in>
         <in>Component.cpp</in>
-        <in>Component.hpp</in>
         <in>Container.cpp</in>
-        <in>Container.hpp</in>
+        <in>DataTables.cpp</in>
         <in>Entity.cpp</in>
+        <in>GameOverState.cpp</in>
         <in>GameState.cpp</in>
         <in>Label.cpp</in>
-        <in>Label.hpp</in>
         <in>Main.cpp</in>
         <in>MenuState.cpp</in>
         <in>PauseState.cpp</in>
+        <in>Pickup.cpp</in>
         <in>Player.cpp</in>
+        <in>Projectile.cpp</in>
         <in>SceneNode.cpp</in>
-        <in>SettingState.cpp</in>
-        <in>SettingsState.hpp</in>
+        <in>SettingsState.cpp</in>
         <in>SpriteNode.cpp</in>
         <in>State.cpp</in>
         <in>StateStack.cpp</in>
+        <in>TextNode.cpp</in>
         <in>TitleState.cpp</in>
         <in>Utility.cpp</in>
         <in>World.cpp</in>
@@ -79,9 +79,9 @@
         <ccTool>
         </ccTool>
       </item>
-      <item path="src/Button.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/Button.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/Button.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="src/Command.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
@@ -91,15 +91,23 @@
         <ccTool>
         </ccTool>
       </item>
-      <item path="src/Component.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/Component.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
-      <item path="src/Component.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/Container.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
-      <item path="src/Container.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/Container.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/DataTables.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="src/Entity.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/GameOverState.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
       </item>
@@ -107,9 +115,9 @@
         <ccTool>
         </ccTool>
       </item>
-      <item path="src/Label.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/Label.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/Label.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="src/Main.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
@@ -119,7 +127,11 @@
         <ccTool>
         </ccTool>
       </item>
-      <item path="src/PauseState.cpp" ex="false" tool="1" flavor2="4">
+      <item path="src/PauseState.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/Pickup.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
       </item>
@@ -127,13 +139,17 @@
         <ccTool>
         </ccTool>
       </item>
+      <item path="src/Projectile.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
       <item path="src/SceneNode.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
       </item>
-      <item path="src/SettingState.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="src/SettingsState.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/SettingsState.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="src/SpriteNode.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
@@ -144,6 +160,10 @@
         </ccTool>
       </item>
       <item path="src/StateStack.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/TextNode.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
       </item>

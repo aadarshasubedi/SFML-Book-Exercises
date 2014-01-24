@@ -2,4 +2,4 @@
 
 Command::Command()
 : action()
-, category(Category::None){ }
+, category(Category::None){}

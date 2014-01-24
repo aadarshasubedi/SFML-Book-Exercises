@@ -6,7 +6,6 @@
 
 #include "State.hpp"
 #include "Container.hpp"
-#include "Button.hpp"
 
 class PauseState : public State {
     private:

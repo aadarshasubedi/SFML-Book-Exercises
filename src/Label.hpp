@@ -14,7 +14,7 @@ namespace GUI {
             
         private:
             sf::Text mText;
-            
+
         public:
             Label(const std::string& text, const FontHolder& fonts);
 

@@ -5,13 +5,13 @@ State::Context::Context(sf::RenderWindow& window, TextureHolder& textures, FontH
 : window(&window)
 , textures(&textures)
 , fonts(&fonts)
-, player(&player) { }
+, player(&player){}
 
 State::State(StateStack& stack, Context context)
 : mStack(&stack)
-, mContext(context) { }
+, mContext(context){}
 
-State::~State() { }
+State::~State(){}
 
 void State::requestStackPush(States::ID stateID) { mStack->pushState(stateID); }
 

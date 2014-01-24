@@ -16,9 +16,10 @@ LDFLAGS = $(SFML_LIB):$(GLEW_LIB)
 BIN_DIR = ./bin
 SOURCES =  src/Main.cpp src/Aircraft.cpp src/Application.cpp src/Button.cpp \
     src/Command.cpp src/CommandQueue.cpp src/Component.cpp src/Container.cpp \
-    src/Entity.cpp src/GameState.cpp src/Label.cpp \
-    src/MenuState.cpp src/PauseState.cpp src/Player.cpp src/SettingState.cpp \
-    src/SceneNode.cpp src/SpriteNode.cpp src/State.cpp src/StateStack.cpp \
+    src/DataTables.cpp src/Entity.cpp src/GameOverState.cpp src/GameState.cpp \
+    src/Label.cpp src/MenuState.cpp src/PauseState.cpp src/Pickup.cpp \
+    src/Player.cpp src/Projectile.cpp src/SettingsState.cpp src/SceneNode.cpp \
+    src/SpriteNode.cpp src/State.cpp src/StateStack.cpp src/TextNode.cpp \
     src/TitleState.cpp src/Utility.cpp src/World.cpp
 
 TARGET_BIN = $(BIN_DIR)/BasicGame
@@ -59,6 +60,9 @@ install:
 
 make_dirs :
 	mkdir -p $(BIN_DIR)
+	
+check:
+	valgrind --log-file=valgrind.output --leak-check=yes --tool=memcheck $(TARGET_BIN)
 
 clean:
 	rm -f bin/* && rm $(shell find . -name '*.o') 

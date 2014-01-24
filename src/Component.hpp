@@ -7,18 +7,20 @@
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/Transformable.hpp>
 
-namespace sf { class Event; }
+namespace sf {
+    class Event;
+}
 
 namespace GUI {
-    class Component : public sf::Drawable, public sf::Transformable, private sf::NonCopyable {
+    class Component : public sf::Drawable, public sf::Transformable, private sf::NonCopyable {            
         public:
             typedef std::shared_ptr<Component> Ptr;
-
+            
         private:
             bool mIsSelected;
             bool mIsActive;
 
-	public:
+        public:
             Component();
             virtual ~Component();
 

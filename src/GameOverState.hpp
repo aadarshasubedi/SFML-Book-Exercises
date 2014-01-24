@@ -1,5 +1,5 @@
-#ifndef MENUSTATE_HPP
-#define MENUSTATE_HPP
+#ifndef GAMEOVERSTATE_HPP
+#define GAMEOVERSTATE_HPP
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -7,17 +7,17 @@
 #include "State.hpp"
 #include "Container.hpp"
 
-class MenuState : public State {
+class GameOverState : public State {
     private:
-        sf::Sprite mBackgroundSprite;
-        GUI::Container mGUIContainer;
+        sf::Text mGameOverText;
+        sf::Time mElapsedTime;
         
     public:
-        MenuState(StateStack& stack, Context context);
+        GameOverState(StateStack& stack, Context context);
 
         virtual void draw();
         virtual bool update(sf::Time dt);
         virtual bool handleEvent(const sf::Event& event);
 };
 
-#endif // MENUSTATE_HPP
+#endif // GAMEOVERSTATE_HPP

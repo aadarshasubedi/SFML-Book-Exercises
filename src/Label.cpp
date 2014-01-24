@@ -6,7 +6,7 @@
 
 namespace GUI {
     Label::Label(const std::string& text, const FontHolder& fonts)
-    : mText(text, fonts.get(Fonts::Main), 16) { }
+    : mText(text, fonts.get(Fonts::Main), 16){}
 
     bool Label::isSelectable() const { return false; }
 

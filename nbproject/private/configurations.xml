@@ -29,9 +29,12 @@
         <in>Component.hpp</in>
         <in>Container.cpp</in>
         <in>Container.hpp</in>
+        <in>DataTables.cpp</in>
+        <in>DataTables.hpp</in>
         <in>Entity.cpp</in>
         <in>Entity.hpp</in>
-        <in>Foreach.hpp</in>
+        <in>GameOverState.cpp</in>
+        <in>GameOverState.hpp</in>
         <in>GameState.cpp</in>
         <in>GameState.hpp</in>
         <in>Label.cpp</in>
@@ -41,14 +44,18 @@
         <in>MenuState.hpp</in>
         <in>PauseState.cpp</in>
         <in>PauseState.hpp</in>
+        <in>Pickup.cpp</in>
+        <in>Pickup.hpp</in>
         <in>Player.cpp</in>
         <in>Player.hpp</in>
+        <in>Projectile.cpp</in>
+        <in>Projectile.hpp</in>
         <in>ResourceHolder.hpp</in>
         <in>ResourceHolder.inl</in>
         <in>ResourceIdentifiers.hpp</in>
         <in>SceneNode.cpp</in>
         <in>SceneNode.hpp</in>
-        <in>SettingState.cpp</in>
+        <in>SettingsState.cpp</in>
         <in>SettingsState.hpp</in>
         <in>SpriteNode.cpp</in>
         <in>SpriteNode.hpp</in>
@@ -57,6 +64,8 @@
         <in>StateIdentifiers.hpp</in>
         <in>StateStack.cpp</in>
         <in>StateStack.hpp</in>
+        <in>TextNode.cpp</in>
+        <in>TextNode.hpp</in>
         <in>TitleState.cpp</in>
         <in>TitleState.hpp</in>
         <in>Utility.cpp</in>

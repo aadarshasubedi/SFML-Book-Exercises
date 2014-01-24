@@ -3,7 +3,6 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 
 #include "Container.hpp"
-#include "Foreach.hpp"
 
 namespace GUI {
     Container::Container()
@@ -14,7 +13,7 @@ namespace GUI {
         mChildren.push_back(component);
 
         if (!hasSelection() && component->isSelectable())
-            select(mChildren.size() - 1);
+                select(mChildren.size() - 1);
     }
 
     bool Container::isSelectable() const { return false; }
@@ -26,7 +25,7 @@ namespace GUI {
         }
         else if (event.type == sf::Event::KeyReleased) {
             if (event.key.code == sf::Keyboard::W || event.key.code == sf::Keyboard::Up) {
-                    selectPrevious();
+                selectPrevious();
             }
             else if (event.key.code == sf::Keyboard::S || event.key.code == sf::Keyboard::Down) {
                 selectNext();
@@ -66,8 +65,8 @@ namespace GUI {
         do
             next = (next + 1) % mChildren.size();
         while (!mChildren[next]->isSelectable());
-        
-        select(next);           // Select that component
+
+        select(next);   // Select that component
     }
 
     void Container::selectPrevious() {

@@ -20,7 +20,7 @@ namespace sf {
 
 class StateStack : private sf::NonCopyable {
     public:
-        enum Action  {
+        enum Action {
             Push,
             Pop,
             Clear,
@@ -35,10 +35,10 @@ class StateStack : private sf::NonCopyable {
         };
 
     private:
-        std::vector<State::Ptr> mStack;
+        std::vector<State::Ptr>	mStack;
         std::vector<PendingChange> mPendingList;
 
-        State::Context										mContext;
+        State::Context mContext;
         std::map<States::ID, std::function<State::Ptr()>> mFactories;
 
     public:		
@@ -65,7 +65,7 @@ class StateStack : private sf::NonCopyable {
 
 template <typename T>
 void StateStack::registerState(States::ID stateID) {
-    mFactories[stateID] = [this] ()  {
+    mFactories[stateID] = [this] () {
         return State::Ptr(new T(*this, mContext));
     };
 }

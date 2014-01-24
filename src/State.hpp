@@ -16,22 +16,22 @@ namespace sf{
 class StateStack;
 class Player;
 
-class State {        
+class State {
     public:
         typedef std::unique_ptr<State> Ptr;
 
         struct Context {
-            Context(sf::RenderWindow& window, TextureHolder& textures, FontHolder& fonts, Player& player);
-
             sf::RenderWindow* window;
             TextureHolder* textures;
             FontHolder* fonts;
             Player* player;
+            
+            Context(sf::RenderWindow& window, TextureHolder& textures, FontHolder& fonts, Player& player);
         };
-        
+
     private:
         StateStack* mStack;
-        Context mContext;
+        Context	mContext;
 
     public:
         State(StateStack& stack, Context context);
