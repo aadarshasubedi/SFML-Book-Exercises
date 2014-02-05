@@ -5,15 +5,16 @@
 #include "Container.hpp"
 
 namespace GUI {
+
     Container::Container()
     : mChildren()
-    , mSelectedChild(-1) { }
+    , mSelectedChild(-1) {}
 
     void Container::pack(Component::Ptr component) {
         mChildren.push_back(component);
 
         if (!hasSelection() && component->isSelectable())
-                select(mChildren.size() - 1);
+            select(mChildren.size() - 1);
     }
 
     bool Container::isSelectable() const { return false; }
@@ -66,7 +67,8 @@ namespace GUI {
             next = (next + 1) % mChildren.size();
         while (!mChildren[next]->isSelectable());
 
-        select(next);   // Select that component
+        // Select that component
+        select(next);
     }
 
     void Container::selectPrevious() {
@@ -78,7 +80,9 @@ namespace GUI {
         do
             prev = (prev + mChildren.size() - 1) % mChildren.size();
         while (!mChildren[prev]->isSelectable());
-        
-        select(prev);   // Select that component
+
+        // Select that component
+        select(prev);
     }
+
 }

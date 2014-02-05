@@ -8,7 +8,7 @@
 class SpriteNode : public SceneNode {
     private:
         sf::Sprite mSprite;
-        
+
     public:
         explicit SpriteNode(const sf::Texture& texture);
         SpriteNode(const sf::Texture& texture, const sf::IntRect& textureRect);

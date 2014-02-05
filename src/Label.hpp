@@ -11,7 +11,7 @@ namespace GUI {
     class Label : public Component {
         public:
             typedef std::shared_ptr<Label> Ptr;
-            
+
         private:
             sf::Text mText;
 

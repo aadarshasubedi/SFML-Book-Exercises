@@ -8,7 +8,11 @@
 #include "Utility.hpp"
 #include "Pickup.hpp"
 #include "CommandQueue.hpp"
+#include "SoundNode.hpp"
+#include "NetworkNode.hpp"
 #include "ResourceHolder.hpp"
+
+using namespace std::placeholders;
 
 namespace {
     const std::vector<AircraftData> Table = initializeAircraftData();
@@ -17,22 +21,31 @@ namespace {
 Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& fonts)
 : Entity(Table[type].hitpoints)
 , mType(type)
-, mSprite(textures.get(Table[type].texture))
+, mSprite(textures.get(Table[type].texture), Table[type].textureRect)
+, mExplosion(textures.get(Textures::Explosion))
 , mFireCommand()
 , mMissileCommand()
 , mFireCountdown(sf::Time::Zero)
 , mIsFiring(false)
 , mIsLaunchingMissile(false)
-, mIsMarkedForRemoval(false)
+, mShowExplosion(true)
+, mExplosionBegan(false)
+, mSpawnedPickup(false)
+, mPickupsEnabled(true)
 , mFireRateLevel(1)
 , mSpreadLevel(1)
 , mMissileAmmo(2)
 , mDropPickupCommand()
 , mTravelledDistance(0.f)
 , mDirectionIndex(0)
-, mHealthDisplay(nullptr)
-, mMissileDisplay(nullptr) {
+, mMissileDisplay(nullptr)
+, mIdentifier(0) {
+    mExplosion.setFrameSize(sf::Vector2i(256, 256));
+    mExplosion.setNumFrames(16);
+    mExplosion.setDuration(sf::seconds(1));
+
     centerOrigin(mSprite);
+    centerOrigin(mExplosion);
 
     mFireCommand.category = Category::SceneAirLayer;
     mFireCommand.action   = [this, &textures] (SceneNode& node, sf::Time) {
@@ -40,7 +53,7 @@ Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& f
     };
 
     mMissileCommand.category = Category::SceneAirLayer;
-    mMissileCommand.action   = [this, &textures] (SceneNode& node, sf::Time) {
+    mMissileCommand.action = [this, &textures] (SceneNode& node, sf::Time) {
         createProjectile(node, Projectile::Missile, 0.f, 0.5f, textures);
     };
 
@@ -63,26 +76,59 @@ Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& f
     updateTexts();
 }
 
+int Aircraft::getMissileAmmo() const { return mMissileAmmo; }
+
+void Aircraft::setMissileAmmo(int ammo) { mMissileAmmo = ammo; }
+
 void Aircraft::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const {
-    target.draw(mSprite, states);
+    if (isDestroyed() && mShowExplosion)
+        target.draw(mExplosion, states);
+    else
+        target.draw(mSprite, states);
 }
 
+void Aircraft::disablePickups() { mPickupsEnabled = false; }
+
 void Aircraft::updateCurrent(sf::Time dt, CommandQueue& commands) {
+    // Update texts and roll animation
+    updateTexts();
+    updateRollAnimation();
+
     // Entity has been destroyed: Possibly drop pickup, mark for removal
     if (isDestroyed()) {
         checkPickupDrop(commands);
+        mExplosion.update(dt);
 
-        mIsMarkedForRemoval = true;
+        // Play explosion sound only once
+        if (!mExplosionBegan) {
+            // Play sound effect
+            SoundEffect::ID soundEffect = (randomInt(2) == 0) ? SoundEffect::Explosion1 : SoundEffect::Explosion2;
+            playLocalSound(commands, soundEffect);
+
+            // Emit network game action for enemy explosions
+            if (!isAllied()) {
+                sf::Vector2f position = getWorldPosition();
+
+                Command command;
+                command.category = Category::Network;
+                command.action = derivedAction<NetworkNode>([position] (NetworkNode& node, sf::Time) {
+                    node.notifyGameAction(GameActions::EnemyExplode, position);
+                });
+
+                commands.push(command);
+        }
+
+            mExplosionBegan = true;
+        }
         return;
     }
-   
-    checkProjectileLaunch(dt, commands);         // Check if bullets or missiles are fired
+
+    // Check if bullets or missiles are fired
+    checkProjectileLaunch(dt, commands);
 
     // Update enemy movement pattern; apply velocity
     updateMovementPattern(dt);
     Entity::updateCurrent(dt, commands);
-    
-    updateTexts();      // Update texts
 }
 
 unsigned int Aircraft::getCategory() const {
@@ -96,13 +142,20 @@ sf::FloatRect Aircraft::getBoundingRect() const {
     return getWorldTransform().transformRect(mSprite.getGlobalBounds());
 }
 
-bool Aircraft::isMarkedForRemoval() const { return mIsMarkedForRemoval; }
+bool Aircraft::isMarkedForRemoval() const {
+    return isDestroyed() && (mExplosion.isFinished() || !mShowExplosion);
+}
+
+void Aircraft::remove() {
+    Entity::remove();
+    mShowExplosion = false;
+}
 
 bool Aircraft::isAllied() const { return mType == Eagle; }
 
 float Aircraft::getMaxSpeed() const { return Table[mType].speed; }
 
-void Aircraft::increaseFireRate() {
+void Aircraft::increaseFireRate() { 
     if (mFireRateLevel < 10)
         ++mFireRateLevel;
 }
@@ -112,9 +165,7 @@ void Aircraft::increaseSpread() {
         ++mSpreadLevel;
 }
 
-void Aircraft::collectMissiles(unsigned int count) {
-    mMissileAmmo += count;
-}
+void Aircraft::collectMissiles(unsigned int count) { mMissileAmmo += count; }
 
 void Aircraft::fire() {
     // Only ships with fire interval != 0 are able to fire
@@ -123,11 +174,31 @@ void Aircraft::fire() {
 }
 
 void Aircraft::launchMissile() {
-    if (mMissileAmmo > 0) 	{
+    if (mMissileAmmo > 0) {
         mIsLaunchingMissile = true;
         --mMissileAmmo;
     }
 }
+
+void Aircraft::playLocalSound(CommandQueue& commands, SoundEffect::ID effect) {
+    sf::Vector2f worldPosition = getWorldPosition();
+
+    Command command;
+    command.category = Category::SoundEffect;
+    command.action = derivedAction<SoundNode>(
+        [effect, worldPosition] (SoundNode& node, sf::Time) {
+            node.playSound(effect, worldPosition); 
+        });
+
+    commands.push(command);
+}
+
+int	Aircraft::getIdentifier()
+{
+	return mIdentifier;
+}
+
+void Aircraft::setIdentifier(int identifier) { mIdentifier = identifier; }
 
 void Aircraft::updateMovementPattern(sf::Time dt) {
     // Enemy airplane: Movement pattern
@@ -151,8 +222,12 @@ void Aircraft::updateMovementPattern(sf::Time dt) {
 }
 
 void Aircraft::checkPickupDrop(CommandQueue& commands) {
-    if (!isAllied() && randomInt(3) == 0)
+    // Drop pickup, if enemy airplane, with probability 1/3, if pickup not yet dropped
+    // and if not in network mode (where pickups are dropped via packets)
+    if (!isAllied() && randomInt(3) == 0 && !mSpawnedPickup && mPickupsEnabled)
         commands.push(mDropPickupCommand);
+
+    mSpawnedPickup = true;
 }
 
 void Aircraft::checkProjectileLaunch(sf::Time dt, CommandQueue& commands) {
@@ -164,10 +239,12 @@ void Aircraft::checkProjectileLaunch(sf::Time dt, CommandQueue& commands) {
     if (mIsFiring && mFireCountdown <= sf::Time::Zero) {
         // Interval expired: We can fire a new bullet
         commands.push(mFireCommand);
+        playLocalSound(commands, isAllied() ? SoundEffect::AlliedGunfire : SoundEffect::EnemyGunfire);
+
         mFireCountdown += Table[mType].fireInterval / (mFireRateLevel + 1.f);
         mIsFiring = false;
     }
-    else if (mFireCountdown > sf::Time::Zero)  {
+    else if (mFireCountdown > sf::Time::Zero) {
         // Interval not expired: Decrease it further
         mFireCountdown -= dt;
         mIsFiring = false;
@@ -176,6 +253,8 @@ void Aircraft::checkProjectileLaunch(sf::Time dt, CommandQueue& commands) {
     // Check for missile launch
     if (mIsLaunchingMissile) {
         commands.push(mMissileCommand);
+        playLocalSound(commands, SoundEffect::LaunchMissile);
+
         mIsLaunchingMissile = false;
     }
 }
@@ -221,14 +300,36 @@ void Aircraft::createPickup(SceneNode& node, const TextureHolder& textures) cons
 }
 
 void Aircraft::updateTexts() {
-    mHealthDisplay->setString(toString(getHitpoints()) + " HP");
+    // Display hitpoints
+    if (isDestroyed())
+        mHealthDisplay->setString("");
+    else
+        mHealthDisplay->setString(toString(getHitpoints()) + " HP");
+    
     mHealthDisplay->setPosition(0.f, 50.f);
     mHealthDisplay->setRotation(-getRotation());
 
+    // Display missiles, if available
     if (mMissileDisplay) {
-        if (mMissileAmmo == 0)
+        if (mMissileAmmo == 0 || isDestroyed())
             mMissileDisplay->setString("");
         else
             mMissileDisplay->setString("M: " + toString(mMissileAmmo));
+    }
+}
+
+void Aircraft::updateRollAnimation() {
+    if (Table[mType].hasRollAnimation) {
+        sf::IntRect textureRect = Table[mType].textureRect;
+
+        // Roll left: Texture rect offset once
+        if (getVelocity().x < 0.f)
+            textureRect.left += textureRect.width;
+
+        // Roll right: Texture rect offset twice
+        else if (getVelocity().x > 0.f)
+            textureRect.left += 2 * textureRect.width;
+
+        mSprite.setTextureRect(textureRect);
     }
 }

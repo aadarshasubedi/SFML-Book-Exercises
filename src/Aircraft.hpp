@@ -8,10 +8,9 @@
 #include "ResourceIdentifiers.hpp"
 #include "Projectile.hpp"
 #include "TextNode.hpp"
+#include "Animation.hpp"
 
-
-class Aircraft : public Entity
-{
+class Aircraft : public Entity {
     public:
         enum Type {
             Eagle,
@@ -19,16 +18,20 @@ class Aircraft : public Entity
             Avenger,
             TypeCount
         };
-        
+
     private:
         Type mType;
         sf::Sprite mSprite;
+        Animation mExplosion;
         Command mFireCommand;
         Command mMissileCommand;
         sf::Time mFireCountdown;
         bool mIsFiring;
         bool mIsLaunchingMissile;
-        bool mIsMarkedForRemoval;
+        bool mShowExplosion;
+        bool mExplosionBegan;
+        bool mSpawnedPickup;
+        bool mPickupsEnabled;
 
         int mFireRateLevel;
         int mSpreadLevel;
@@ -40,14 +43,18 @@ class Aircraft : public Entity
         TextNode* mHealthDisplay;
         TextNode* mMissileDisplay;
 
+        int mIdentifier;
+
     public:
         Aircraft(Type type, const TextureHolder& textures, const FontHolder& fonts);
 
         virtual unsigned int getCategory() const;
         virtual sf::FloatRect getBoundingRect() const;
+        virtual void remove();
         virtual bool isMarkedForRemoval() const;
         bool isAllied() const;
         float getMaxSpeed() const;
+        void disablePickups();
 
         void increaseFireRate();
         void increaseSpread();
@@ -55,6 +62,11 @@ class Aircraft : public Entity
 
         void fire();
         void launchMissile();
+        void playLocalSound(CommandQueue& commands, SoundEffect::ID effect);
+        int getIdentifier();
+        void setIdentifier(int identifier);
+        int getMissileAmmo() const;
+        void setMissileAmmo(int ammo);
 
     private:
         virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
@@ -68,6 +80,7 @@ class Aircraft : public Entity
         void createPickup(SceneNode& node, const TextureHolder& textures) const;
 
         void updateTexts();
+        void updateRollAnimation();
 };
 
 #endif // AIRCRAFT_HPP

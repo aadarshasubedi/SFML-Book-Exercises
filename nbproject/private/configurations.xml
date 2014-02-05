@@ -5,7 +5,13 @@
       <df name="bin">
       </df>
       <df name="gfx">
+        <df name="shaders">
+        </df>
         <df name="textures">
+        </df>
+      </df>
+      <df name="sfx">
+        <df name="music">
         </df>
       </df>
       <df name="src">
@@ -16,8 +22,12 @@
         </df>
         <in>Aircraft.cpp</in>
         <in>Aircraft.hpp</in>
+        <in>Animation.cpp</in>
+        <in>Animation.hpp</in>
         <in>Application.cpp</in>
         <in>Application.hpp</in>
+        <in>BloomEffect.cpp</in>
+        <in>BloomEffect.hpp</in>
         <in>Button.cpp</in>
         <in>Button.hpp</in>
         <in>Category.hpp</in>
@@ -31,23 +41,41 @@
         <in>Container.hpp</in>
         <in>DataTables.cpp</in>
         <in>DataTables.hpp</in>
+        <in>EmitterNode.cpp</in>
+        <in>EmitterNode.hpp</in>
         <in>Entity.cpp</in>
         <in>Entity.hpp</in>
         <in>GameOverState.cpp</in>
         <in>GameOverState.hpp</in>
+        <in>GameServer.cpp</in>
+        <in>GameServer.hpp</in>
         <in>GameState.cpp</in>
         <in>GameState.hpp</in>
+        <in>KeyBinding.cpp</in>
+        <in>KeyBinding.hpp</in>
         <in>Label.cpp</in>
         <in>Label.hpp</in>
         <in>Main.cpp</in>
         <in>MenuState.cpp</in>
         <in>MenuState.hpp</in>
+        <in>MultiplayerGameState.cpp</in>
+        <in>MultiplayerGameState.hpp</in>
+        <in>MusicPlayer.cpp</in>
+        <in>MusicPlayer.hpp</in>
+        <in>NetworkNode.cpp</in>
+        <in>NetworkNode.hpp</in>
+        <in>NetworkProtocol.hpp</in>
+        <in>Particle.hpp</in>
+        <in>ParticleNode.cpp</in>
+        <in>ParticleNode.hpp</in>
         <in>PauseState.cpp</in>
         <in>PauseState.hpp</in>
         <in>Pickup.cpp</in>
         <in>Pickup.hpp</in>
         <in>Player.cpp</in>
         <in>Player.hpp</in>
+        <in>PostEffect.cpp</in>
+        <in>PostEffect.hpp</in>
         <in>Projectile.cpp</in>
         <in>Projectile.hpp</in>
         <in>ResourceHolder.hpp</in>
@@ -57,6 +85,10 @@
         <in>SceneNode.hpp</in>
         <in>SettingsState.cpp</in>
         <in>SettingsState.hpp</in>
+        <in>SoundNode.cpp</in>
+        <in>SoundNode.hpp</in>
+        <in>SoundPlayer.cpp</in>
+        <in>SoundPlayer.hpp</in>
         <in>SpriteNode.cpp</in>
         <in>SpriteNode.hpp</in>
         <in>State.cpp</in>

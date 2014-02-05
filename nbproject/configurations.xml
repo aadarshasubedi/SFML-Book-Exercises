@@ -8,25 +8,37 @@
           <in>ResourceTests.cpp</in>
         </df>
         <in>Aircraft.cpp</in>
+        <in>Animation.cpp</in>
         <in>Application.cpp</in>
+        <in>BloomEffect.cpp</in>
         <in>Button.cpp</in>
         <in>Command.cpp</in>
         <in>CommandQueue.cpp</in>
         <in>Component.cpp</in>
         <in>Container.cpp</in>
         <in>DataTables.cpp</in>
+        <in>EmitterNode.cpp</in>
         <in>Entity.cpp</in>
         <in>GameOverState.cpp</in>
+        <in>GameServer.cpp</in>
         <in>GameState.cpp</in>
+        <in>KeyBinding.cpp</in>
         <in>Label.cpp</in>
         <in>Main.cpp</in>
         <in>MenuState.cpp</in>
+        <in>MultiplayerGameState.cpp</in>
+        <in>MusicPlayer.cpp</in>
+        <in>NetworkNode.cpp</in>
+        <in>ParticleNode.cpp</in>
         <in>PauseState.cpp</in>
         <in>Pickup.cpp</in>
         <in>Player.cpp</in>
+        <in>PostEffect.cpp</in>
         <in>Projectile.cpp</in>
         <in>SceneNode.cpp</in>
         <in>SettingsState.cpp</in>
+        <in>SoundNode.cpp</in>
+        <in>SoundPlayer.cpp</in>
         <in>SpriteNode.cpp</in>
         <in>State.cpp</in>
         <in>StateStack.cpp</in>
@@ -75,7 +87,15 @@
         <ccTool>
         </ccTool>
       </item>
+      <item path="src/Animation.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
       <item path="src/Application.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/BloomEffect.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
       </item>
@@ -103,6 +123,10 @@
         <ccTool>
         </ccTool>
       </item>
+      <item path="src/EmitterNode.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
       <item path="src/Entity.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
@@ -111,7 +135,15 @@
         <ccTool>
         </ccTool>
       </item>
+      <item path="src/GameServer.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
       <item path="src/GameState.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/KeyBinding.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
       </item>
@@ -127,6 +159,22 @@
         <ccTool>
         </ccTool>
       </item>
+      <item path="src/MultiplayerGameState.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/MusicPlayer.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/NetworkNode.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/ParticleNode.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
       <item path="src/PauseState.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
@@ -139,6 +187,10 @@
         <ccTool>
         </ccTool>
       </item>
+      <item path="src/PostEffect.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
       <item path="src/Projectile.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
@@ -148,6 +200,14 @@
         </ccTool>
       </item>
       <item path="src/SettingsState.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/SoundNode.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="src/SoundPlayer.cpp" ex="false" tool="1" flavor2="8">
         <ccTool>
         </ccTool>
       </item>

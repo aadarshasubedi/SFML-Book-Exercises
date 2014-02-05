@@ -7,9 +7,10 @@
 #include <SFML/Graphics/Text.hpp>
 
 #include "Utility.hpp"
+#include "Animation.hpp"
 
 namespace {
-    std::default_random_engine createRandomEngine()  {
+    std::default_random_engine createRandomEngine() {
         auto seed = static_cast<unsigned long>(std::time(nullptr));
         return std::default_random_engine(seed);
     }
@@ -138,7 +139,12 @@ void centerOrigin(sf::Text& text) {
     text.setOrigin(std::floor(bounds.width / 2.f), std::floor(bounds.height / 2.f));
 }
 
-float toDegree(float radian) {
+void centerOrigin(Animation& animation) {
+    sf::FloatRect bounds = animation.getLocalBounds();
+    animation.setOrigin(std::floor(bounds.width / 2.f), std::floor(bounds.height / 2.f));
+}
+
+float toDegree(float radian) { 
     return 180.f / 3.141592653589793238462643383f * radian;
 }
 

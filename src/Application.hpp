@@ -7,20 +7,23 @@
 
 #include "ResourceHolder.hpp"
 #include "ResourceIdentifiers.hpp"
-#include "Player.hpp"
+#include "KeyBinding.hpp"
 #include "StateStack.hpp"
-
+#include "MusicPlayer.hpp"
+#include "SoundPlayer.hpp"
 
 class Application {
-
     private:
         static const sf::Time TimePerFrame;
 
         sf::RenderWindow mWindow;
         TextureHolder mTextures;
         FontHolder mFonts;
-        Player mPlayer;
+        MusicPlayer mMusic;
+        SoundPlayer mSounds;
 
+        KeyBinding mKeyBinding1;
+        KeyBinding mKeyBinding2;
         StateStack mStateStack;
 
         sf::Text mStatisticsText;

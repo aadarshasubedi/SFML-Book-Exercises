@@ -18,7 +18,7 @@ class Pickup : public Entity {
             FireRate,
             TypeCount
         };
-            
+        
     private:
         Type mType;
         sf::Sprite mSprite;
@@ -29,7 +29,7 @@ class Pickup : public Entity {
         virtual unsigned int getCategory() const;
         virtual sf::FloatRect getBoundingRect() const;
 
-        void apply(Aircraft& player) const;
+        void  apply(Aircraft& player) const;
 
     protected:
         virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;

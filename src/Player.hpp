@@ -3,50 +3,52 @@
 
 #include <map>
 
+#include <SFML/System/NonCopyable.hpp>
 #include <SFML/Window/Event.hpp>
+#include <SFML/Network/TcpSocket.hpp>
 
 #include "Command.hpp"
+#include "KeyBinding.hpp"
 
 class CommandQueue;
 
-class Player {
+class Player : private sf::NonCopyable {
     public:
-        enum Action {
-            MoveLeft,
-            MoveRight,
-            MoveUp,
-            MoveDown,
-            Fire,
-            LaunchMissile,
-            ActionCount
-        };
+        typedef PlayerAction::Type Action;
 
-        enum MissionStatus  {
+        enum MissionStatus {
             MissionRunning,
             MissionSuccess,
             MissionFailure
         };
 
     private:
-        std::map<sf::Keyboard::Key, Action> mKeyBinding;
+        const KeyBinding* mKeyBinding;
         std::map<Action, Command> mActionBinding;
+        std::map<Action, bool> mActionProxies;
         MissionStatus mCurrentMissionStatus;
+        int mIdentifier;
+        sf::TcpSocket* mSocket;
 
     public:
-        Player();
+        Player(sf::TcpSocket* socket, sf::Int32 identifier, const KeyBinding* binding);
 
         void handleEvent(const sf::Event& event, CommandQueue& commands);
         void handleRealtimeInput(CommandQueue& commands);
+        void handleRealtimeNetworkInput(CommandQueue& commands);
 
-        void assignKey(Action action, sf::Keyboard::Key key);
-        sf::Keyboard::Key getAssignedKey(Action action) const;
+        // React to events or realtime state changes received over the network
+        void handleNetworkEvent(Action action, CommandQueue& commands);
+        void handleNetworkRealtimeChange(Action action, bool actionEnabled);
 
         void setMissionStatus(MissionStatus status);
         MissionStatus getMissionStatus() const;
 
+        void disableAllRealtimeActions();
+        bool isLocal() const;
+
     private:
         void initializeActions();
-        static bool isRealtimeAction(Action action);
 };
 
 #endif // PLAYER_HPP

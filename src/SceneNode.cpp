@@ -7,15 +7,15 @@
 
 #include "SceneNode.hpp"
 #include "Command.hpp"
-#include "Utility.hpp"
 
+#include "Utility.hpp"
 
 SceneNode::SceneNode(Category::Type category)
 : mChildren()
 , mParent(nullptr)
-, mDefaultCategory(category){}
+, mDefaultCategory(category) { }
 
-void SceneNode::attachChild(Ptr child){
+void SceneNode::attachChild(Ptr child) {
     child->mParent = this;
     mChildren.push_back(std::move(child));
 }
@@ -86,7 +86,7 @@ sf::Transform SceneNode::getWorldTransform() const {
     sf::Transform transform = sf::Transform::Identity;
 
     for (const SceneNode* node = this; node != nullptr; node = node->mParent)
-            transform = node->getTransform() * transform;
+        transform = node->getTransform() * transform;
 
     return transform;
 }
@@ -129,9 +129,8 @@ void SceneNode::removeWrecks() {
 
 sf::FloatRect SceneNode::getBoundingRect() const { return sf::FloatRect(); }
 
-bool SceneNode::isMarkedForRemoval() const {
-    // By default, remove node if entity is destroyed
-    return isDestroyed();
+bool SceneNode::isMarkedForRemoval() const {    
+    return isDestroyed();       // By default, remove node if entity is destroyed
 }
 
 bool SceneNode::isDestroyed() const {

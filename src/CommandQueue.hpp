@@ -11,7 +11,7 @@ class CommandQueue {
         
     public:
         void push(const Command& command);
-        Command pop();
+        Command	pop();
         bool isEmpty() const;
 };
 

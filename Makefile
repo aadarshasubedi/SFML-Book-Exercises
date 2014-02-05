@@ -5,7 +5,7 @@ DATA_PREFIX=$(PREFIX)/share/BasicGame/
 
 XX = g++
 SFML_LIB = -L/usr/local/lib -lsfml-graphics -lsfml-window -lsfml-system \
-		   -Wl,-rpath=/usr/local/lib
+    -lsfml-network -lsfml-audio -Wl,-rpath=/usr/local/lib
 GLEW_LIB = -L/usr/lib64 -lGLEW -Wl,-rpath=/usr/lib64
 
 SFML_INCLUDE = -I/usr/local/include
@@ -14,12 +14,16 @@ CXXFLAGS = -Wall -c -g -std=c++11 $(SFML_INCLUDE)
 LDFLAGS = $(SFML_LIB):$(GLEW_LIB)
 
 BIN_DIR = ./bin
-SOURCES =  src/Main.cpp src/Aircraft.cpp src/Application.cpp src/Button.cpp \
-    src/Command.cpp src/CommandQueue.cpp src/Component.cpp src/Container.cpp \
-    src/DataTables.cpp src/Entity.cpp src/GameOverState.cpp src/GameState.cpp \
-    src/Label.cpp src/MenuState.cpp src/PauseState.cpp src/Pickup.cpp \
-    src/Player.cpp src/Projectile.cpp src/SettingsState.cpp src/SceneNode.cpp \
-    src/SpriteNode.cpp src/State.cpp src/StateStack.cpp src/TextNode.cpp \
+SOURCES =  src/Main.cpp src/Aircraft.cpp src/Animation.cpp src/Application.cpp \
+    src/BloomEffect.cpp src/Button.cpp src/Command.cpp src/CommandQueue.cpp \
+    src/Component.cpp src/Container.cpp src/DataTables.cpp src/Entity.cpp \
+    src/EmitterNode.cpp src/Entity.cpp src/GameOverState.cpp src/GameServer.cpp \
+    src/GameState.cpp src/KeyBinding.cpp src/Label.cpp src/MenuState.cpp \
+    src/MultiplayerGameState.cpp src/MusicPlayer.cpp src/NetworkNode.cpp \
+    src/ParticleNode.cpp \
+    src/PauseState.cpp src/Pickup.cpp src/Player.cpp src/PostEffect.cpp \
+    src/Projectile.cpp src/SceneNode.cpp src/SettingsState.cpp src/SoundNode.cpp \
+    src/SoundPlayer.cpp src/SpriteNode.cpp src/State.cpp src/StateStack.cpp src/TextNode.cpp \
     src/TitleState.cpp src/Utility.cpp src/World.cpp
 
 TARGET_BIN = $(BIN_DIR)/BasicGame

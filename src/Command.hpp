@@ -13,7 +13,7 @@ class SceneNode;
 struct Command {
     typedef std::function<void(SceneNode&, sf::Time)> Action;
 
-    Command();
+     Command();
 
     Action action;
     unsigned int category;

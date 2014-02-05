@@ -13,7 +13,7 @@ class GameOverState : public State {
         sf::Time mElapsedTime;
         
     public:
-        GameOverState(StateStack& stack, Context context);
+        GameOverState(StateStack& stack, Context context, const std::string& text);
 
         virtual void draw();
         virtual bool update(sf::Time dt);
