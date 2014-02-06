@@ -1,0 +1,2773 @@
+==6676== Memcheck, a memory error detector
+==6676== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==6676== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==6676== Command: ./bin/BasicGame
+==6676== Parent PID: 6675
+==6676== 
+==6676== Syscall param ioctl(generic) points to uninitialised byte(s)
+==6676==    at 0x61CF337: ioctl (syscall-template.S:81)
+==6676==    by 0x4057184: ukiCreateContext (in /usr/lib/fglrx/libatiuki.so.1.0)
+==6676==    by 0xB229D1D: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x7feffd1e8 is on thread 1's stack
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xB276774: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xB275ED3: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xB27614C: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xB265888: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xAABA0D2: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab1ebff8 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xAABA0E7: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab1ebff8 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA712D41: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC35F7CF: ???
+==6676==    by 0xC35CB9F: ???
+==6676==    by 0xC35CB9F: ???
+==6676==    by 0xC35BADF: ???
+==6676==    by 0xC0D3C5F: ???
+==6676==    by 0x7FEFFE36F: ???
+==6676==    by 0x7FEFFE17F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE4DF: ???
+==6676==    by 0x7FEFFE4CF: ???
+==6676==  Address 0x2aaaab1ac218 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA7027F9: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xA702876: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Invalid write of size 2
+==6676==    at 0x4C2FDAE: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92EEC6: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab1acd26 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 2
+==6676==    at 0x4C2FDAE: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D0BB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab1acb4e is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab1acb28 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD0B025F: ???
+==6676==    by 0xD0AD64F: ???
+==6676==    by 0xD0AD64F: ???
+==6676==    by 0xD0AC5CF: ???
+==6676==    by 0xC0D3C5F: ???
+==6676==    by 0x7FEFFE32F: ???
+==6676==    by 0x7FEFFE13F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE49F: ???
+==6676==    by 0x7FEFFE48F: ???
+==6676==  Address 0x2aaaab1acd00 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D0BB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab1acc38 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x4C2FD30: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab1ace3b is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFFFFFFFFFFE: ???
+==6676==    by 0x7FEFFEC2F: ???
+==6676==  Address 0x2aaaab1ac848 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC0D3C5F: ???
+==6676==    by 0x7FEFFEB8F: ???
+==6676==    by 0x97A49BF: ???
+==6676==    by 0x97A4A03: ???
+==6676==    by 0x4FFFFFFFFF: ???
+==6676==    by 0x100000000: ???
+==6676==    by 0x7FEFFEB00: ???
+==6676==    by 0x14: ???
+==6676==  Address 0x2aaaab1ac948 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Syscall param ioctl(generic) points to uninitialised byte(s)
+==6676==    at 0x61CF337: ioctl (syscall-template.S:81)
+==6676==    by 0x40596D7: uki_firegl_MapLockPageTableNew (in /usr/lib/fglrx/libatiuki.so.1.0)
+==6676==    by 0xB0A85A3: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x413: ???
+==6676==  Address 0x7feffe938 is on thread 1's stack
+==6676== 
+==6676== Syscall param ioctl(generic) points to uninitialised byte(s)
+==6676==    at 0x61CF337: ioctl (syscall-template.S:81)
+==6676==    by 0x4059702: uki_firegl_MapLockPageTableNew (in /usr/lib/fglrx/libatiuki.so.1.0)
+==6676==    by 0xB0A85A3: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x413: ???
+==6676==  Address 0x7feffe928 is on thread 1's stack
+==6676== 
+==6676== Syscall param ioctl(generic) points to uninitialised byte(s)
+==6676==    at 0x61CF337: ioctl (syscall-template.S:81)
+==6676==    by 0x405955A: uki_firegl_ClearDirtyPagesNew (in /usr/lib/fglrx/libatiuki.so.1.0)
+==6676==    by 0xB0A6DD6: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x7feffea0c is on thread 1's stack
+==6676== 
+==6676== Syscall param ioctl(generic) points to uninitialised byte(s)
+==6676==    at 0x61CF337: ioctl (syscall-template.S:81)
+==6676==    by 0x4059921: uki_firegl_UnMapLockPageTableNew (in /usr/lib/fglrx/libatiuki.so.1.0)
+==6676==    by 0xB0A856A: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x973F86F: ???
+==6676==  Address 0x7feffeb00 is on thread 1's stack
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC39FB5F: ???
+==6676==    by 0xC335D0F: ???
+==6676==    by 0xC335D0F: ???
+==6676==    by 0xC3AE29F: ???
+==6676==    by 0xC0D3C5F: ???
+==6676==    by 0x7FEFFD76F: ???
+==6676==    by 0x7FEFFD57F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFD8DF: ???
+==6676==    by 0x7FEFFD8CF: ???
+==6676==  Address 0x2aaaab1acf38 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC8559CF: ???
+==6676==    by 0xC2F35CF: ???
+==6676==    by 0xC2F35CF: ???
+==6676==    by 0xC626F2F: ???
+==6676==    by 0xC0D3C5F: ???
+==6676==    by 0x7FEFFD76F: ???
+==6676==    by 0x7FEFFD57F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFD8DF: ???
+==6676==    by 0x7FEFFD8CF: ???
+==6676==  Address 0x2aaaab1ac278 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC63BA5F: ???
+==6676==    by 0xC62843F: ???
+==6676==    by 0xC62843F: ???
+==6676==    by 0xC63993F: ???
+==6676==    by 0xC0D3C5F: ???
+==6676==    by 0x7FEFFD76F: ???
+==6676==    by 0x7FEFFD57F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFD8DF: ???
+==6676==    by 0x7FEFFD8CF: ???
+==6676==  Address 0x2aaaab1aca38 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x4C2FD30: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFF: ???
+==6676==  Address 0x2aaaab1ac00b is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFF: ???
+==6676==  Address 0x2aaaab1ac000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0xA689018: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7: ???
+==6676==    by 0xC1A9C4F: ???
+==6676==    by 0xC1A9C4F: ???
+==6676==    by 0xC1A9C4F: ???
+==6676==    by 0xC19ABAF: ???
+==6676==    by 0xC19ABDF: ???
+==6676==    by 0xC1C15CF: ???
+==6676==    by 0xA51865B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab1ac100 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFCAAF: ???
+==6676==    by 0xC52EF97: ???
+==6676==    by 0xB8916EF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaaac99b60 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26DE07: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==  Address 0x2aaaab1d5028 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xA688E5F: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7: ???
+==6676==    by 0xC1A9C4F: ???
+==6676==    by 0xC1A9C4F: ???
+==6676==    by 0xC1A9C4F: ???
+==6676==    by 0xC19ABAF: ???
+==6676==    by 0xC19ABDF: ???
+==6676==    by 0xC1C15CF: ???
+==6676==    by 0xA51865B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab1ecc00 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xA688E66: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7: ???
+==6676==    by 0xC1A9C4F: ???
+==6676==    by 0xC1A9C4F: ???
+==6676==    by 0xC1A9C4F: ???
+==6676==    by 0xC19ABAF: ???
+==6676==    by 0xC19ABDF: ???
+==6676==    by 0xC1C15CF: ???
+==6676==    by 0xA51865B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab1ecc08 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7: ???
+==6676==    by 0xC1C188F: ???
+==6676==    by 0xC0D3C5F: ???
+==6676==    by 0xC1C188F: ???
+==6676==    by 0x4FFFFFFFFF: ???
+==6676==    by 0x100000000: ???
+==6676==    by 0xC14D500: ???
+==6676==    by 0x14: ???
+==6676==  Address 0x2aaaab1ecb48 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC8A668F: ???
+==6676==    by 0xC89365F: ???
+==6676==    by 0xC89365F: ???
+==6676==    by 0xC8A0EEF: ???
+==6676==    by 0xC0D3C5F: ???
+==6676==    by 0x7FEFFE2AF: ???
+==6676==    by 0x7FEFFE0BF: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE41F: ???
+==6676==    by 0x7FEFFE40F: ???
+==6676==  Address 0x2aaaab1ec200 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCB0E22F: ???
+==6676==    by 0xCB0C62F: ???
+==6676==    by 0xCB0C62F: ???
+==6676==    by 0xCCEBBCF: ???
+==6676==    by 0xC0D3C5F: ???
+==6676==    by 0x7FEFFE3AF: ???
+==6676==    by 0x7FEFFE1BF: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE51F: ???
+==6676==    by 0x7FEFFE50F: ???
+==6676==  Address 0x2aaaab1ecd38 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA7027F9: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xA702876: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x8F: ???
+==6676==    by 0x1101: ???
+==6676==    by 0x2CF: ???
+==6676==    by 0x1101: ???
+==6676==    by 0x3802895F: ??? (in /usr/lib/valgrind/memcheck-amd64-linux)
+==6676==    by 0xCF90B87: ???
+==6676==    by 0xA7124CE: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA7651CF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x4C2FD30: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaaacb9683 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaaacb9678 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x4C2FD30: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC0D9FAF: ???
+==6676==    by 0x7FEFFD3CF: ???
+==6676==    by 0x7FEFFD4AF: ???
+==6676==    by 0x6: ???
+==6676==    by 0x7FEFFD34F: ???
+==6676==    by 0xB2777CE: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaaacc958b is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC0D9FAF: ???
+==6676==    by 0x7FEFFD3CF: ???
+==6676==    by 0x7FEFFD4AF: ???
+==6676==    by 0x6: ???
+==6676==    by 0x7FEFFD34F: ???
+==6676==    by 0xB2777CE: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaaacc9580 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x60030100000077: ???
+==6676==    by 0x6: ???
+==6676==    by 0x7FEFFCC4F: ???
+==6676==    by 0xB2762C2: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6803010000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0x1400000000067: ???
+==6676==    by 0x47: ???
+==6676==    by 0xFFFFFFFFFFFF: ???
+==6676==  Address 0x2aaaaaccb570 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD12A06F: ???
+==6676==    by 0xD0AE0AF: ???
+==6676==    by 0xD0AE0AF: ???
+==6676==    by 0xD12616F: ???
+==6676==    by 0xC0D3C5F: ???
+==6676==    by 0x7FEFFCD9F: ???
+==6676==    by 0x7FEFFCBAF: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFCF0F: ???
+==6676==    by 0x7FEFFCEFF: ???
+==6676==  Address 0x2aaaab1ec218 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C27175: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C27179: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C27192: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C27196: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C2719A: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C5A6E4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFFFFFFFFFFE: ???
+==6676==    by 0xFFFFFFFFFFFFFFFE: ???
+==6676==    by 0xC07FFFFFFEFFEE7F: ???
+==6676==    by 0xC14E267: ???
+==6676==    by 0xC150323: ???
+==6676==    by 0xC14D4FF: ???
+==6676==    by 0xC14D4FF: ???
+==6676==    by 0x9C51BF0: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD34673F: ???
+==6676==    by 0xD31C84F: ???
+==6676==    by 0xD31C84F: ???
+==6676==    by 0xD31B78F: ???
+==6676==    by 0xD06147F: ???
+==6676==    by 0x7FEFFE32F: ???
+==6676==    by 0x7FEFFE13F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE49F: ???
+==6676==    by 0x7FEFFE48F: ???
+==6676==  Address 0x2aaaab1ec218 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCB2148F: ???
+==6676==    by 0xC5BD9BF: ???
+==6676==    by 0xC5BD9BF: ???
+==6676==    by 0xC7CAD8F: ???
+==6676==    by 0xD06147F: ???
+==6676==    by 0x7FEFFE2EF: ???
+==6676==    by 0x7FEFFE0FF: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE45F: ???
+==6676==    by 0x7FEFFE44F: ???
+==6676==  Address 0x2aaaab1ecc00 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFFFFFFFFFFE: ???
+==6676==    by 0x7FEFFEBEF: ???
+==6676==  Address 0x2aaaab1ec348 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD06147F: ???
+==6676==    by 0x7FEFFEB4F: ???
+==6676==    by 0xCB0EA0F: ???
+==6676==    by 0xCB0EA53: ???
+==6676==    by 0x4FFFFFFFFF: ???
+==6676==    by 0x100000000: ???
+==6676==    by 0x7FEFFEB00: ???
+==6676==    by 0x14: ???
+==6676==  Address 0x2aaaab1ec348 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x96B9C7F: ???
+==6676==    by 0x960A0BF: ???
+==6676==    by 0x960A0BF: ???
+==6676==    by 0xCDF15DF: ???
+==6676==    by 0xD06147F: ???
+==6676==    by 0x7FEFFD72F: ???
+==6676==    by 0x7FEFFD53F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFD89F: ???
+==6676==    by 0x7FEFFD88F: ???
+==6676==  Address 0x2aaaab1ec238 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC24D8FF: ???
+==6676==    by 0x970894F: ???
+==6676==    by 0x970894F: ???
+==6676==    by 0x97F4B4F: ???
+==6676==    by 0xD06147F: ???
+==6676==    by 0x7FEFFD72F: ???
+==6676==    by 0x7FEFFD53F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFD89F: ???
+==6676==    by 0x7FEFFD88F: ???
+==6676==  Address 0x2aaaab1eca78 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC12985F: ???
+==6676==    by 0x97F605F: ???
+==6676==    by 0x97F605F: ???
+==6676==    by 0x966348F: ???
+==6676==    by 0xD06147F: ???
+==6676==    by 0x7FEFFD72F: ???
+==6676==    by 0x7FEFFD53F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFD89F: ???
+==6676==    by 0x7FEFFD88F: ???
+==6676==  Address 0x2aaaab1ec738 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7: ???
+==6676==    by 0xD59D14F: ???
+==6676==    by 0xD06147F: ???
+==6676==    by 0xD59D14F: ???
+==6676==    by 0x4FFFFFFFFF: ???
+==6676==    by 0x100000000: ???
+==6676==    by 0xD083300: ???
+==6676==    by 0x14: ???
+==6676==  Address 0x2aaaab1ec048 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC238ADF: ???
+==6676==    by 0xC3BE22F: ???
+==6676==    by 0xC3BE22F: ???
+==6676==    by 0xC5C0F6F: ???
+==6676==    by 0xD06147F: ???
+==6676==    by 0x7FEFFE26F: ???
+==6676==    by 0x7FEFFE07F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE3DF: ???
+==6676==    by 0x7FEFFE3CF: ???
+==6676==  Address 0x2aaaab1ecf00 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC44EC3F: ???
+==6676==    by 0xD82201F: ???
+==6676==    by 0xD82201F: ???
+==6676==    by 0xC3932DF: ???
+==6676==    by 0xD06147F: ???
+==6676==    by 0x7FEFFE36F: ???
+==6676==    by 0x7FEFFE17F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE4DF: ???
+==6676==    by 0x7FEFFE4CF: ???
+==6676==  Address 0x2aaaab1ecc38 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x2F: ???
+==6676==    by 0x37: ???
+==6676==    by 0x7FEFFCF6F: ???
+==6676==    by 0xD7: ???
+==6676==    by 0x7FEFFD08F: ???
+==6676==  Address 0x2aaaaacfb570 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC6D389F: ???
+==6676==    by 0xC5DBEEF: ???
+==6676==    by 0xC5DBEEF: ???
+==6676==    by 0xC6D264F: ???
+==6676==    by 0xD06147F: ???
+==6676==    by 0x7FEFFCD5F: ???
+==6676==    by 0x7FEFFCB6F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFCECF: ???
+==6676==    by 0x7FEFFCEBF: ???
+==6676==  Address 0x2aaaab1ec518 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C5A6E4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFFFFFFFFFFE: ???
+==6676==    by 0xFFFFFFFFFFFFFFFE: ???
+==6676==    by 0xC07FFFFFFEFFEE3F: ???
+==6676==    by 0xD084067: ???
+==6676==    by 0xD086123: ???
+==6676==    by 0xD0832FF: ???
+==6676==    by 0xD0832FF: ???
+==6676==    by 0x9C51BF0: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC80FCDF: ???
+==6676==    by 0xC80DD2F: ???
+==6676==    by 0xC80DD2F: ???
+==6676==    by 0xC80CC6F: ???
+==6676==    by 0xCCF045F: ???
+==6676==    by 0x7FEFFE3AF: ???
+==6676==    by 0x7FEFFE1BF: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE51F: ???
+==6676==    by 0x7FEFFE50F: ???
+==6676==  Address 0x2aaaab1ec218 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x96BB44F: ???
+==6676==    by 0xC2DB88F: ???
+==6676==    by 0xC2DB88F: ???
+==6676==    by 0xC1FE5AF: ???
+==6676==    by 0xCCF045F: ???
+==6676==    by 0x7FEFFE36F: ???
+==6676==    by 0x7FEFFE17F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE4DF: ???
+==6676==    by 0x7FEFFE4CF: ???
+==6676==  Address 0x2aaaab1ecc00 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFFFFFFFFFFE: ???
+==6676==    by 0x7FEFFEC6F: ???
+==6676==  Address 0x2aaaab1ec148 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCCF045F: ???
+==6676==    by 0x7FEFFEBCF: ???
+==6676==    by 0xC32870F: ???
+==6676==    by 0xC328753: ???
+==6676==    by 0x4FFFFFFFFF: ???
+==6676==    by 0x100000000: ???
+==6676==    by 0x7FEFFEB00: ???
+==6676==    by 0x14: ???
+==6676==  Address 0x2aaaab1ec248 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCCFEA6F: ???
+==6676==    by 0x99E010F: ???
+==6676==    by 0x99E010F: ???
+==6676==    by 0xC1836EF: ???
+==6676==    by 0xCCF045F: ???
+==6676==    by 0x7FEFFD7AF: ???
+==6676==    by 0x7FEFFD5BF: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFD91F: ???
+==6676==    by 0x7FEFFD90F: ???
+==6676==  Address 0x2aaaab1ecf38 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCD580FF: ???
+==6676==    by 0xC184A6F: ???
+==6676==    by 0xC184A6F: ???
+==6676==    by 0xC5D78DF: ???
+==6676==    by 0xCCF045F: ???
+==6676==    by 0x7FEFFD7AF: ???
+==6676==    by 0x7FEFFD5BF: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFD91F: ???
+==6676==    by 0x7FEFFD90F: ???
+==6676==  Address 0x2aaaab1ecc78 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD0AF8AF: ???
+==6676==    by 0xCCF9B4F: ???
+==6676==    by 0xCCF9B4F: ???
+==6676==    by 0xCE7733F: ???
+==6676==    by 0xCCF045F: ???
+==6676==    by 0x7FEFFD7AF: ???
+==6676==    by 0x7FEFFD5BF: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFD91F: ???
+==6676==    by 0x7FEFFD90F: ???
+==6676==  Address 0x2aaaab1ec938 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4DF281: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7: ???
+==6676==    by 0xD86AE9F: ???
+==6676==    by 0xCCF045F: ???
+==6676==    by 0xD86AE9F: ???
+==6676==    by 0x4FFFFFFFFF: ???
+==6676==    by 0x100000000: ???
+==6676==    by 0xC11D200: ???
+==6676==    by 0x14: ???
+==6676==  Address 0x2aaaab1ec648 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCD4757F: ???
+==6676==    by 0xD1C38EF: ???
+==6676==    by 0xD1C38EF: ???
+==6676==    by 0xCD464EF: ???
+==6676==    by 0xCCF045F: ???
+==6676==    by 0x7FEFFE2EF: ???
+==6676==    by 0x7FEFFE0FF: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE45F: ???
+==6676==    by 0x7FEFFE44F: ???
+==6676==  Address 0x2aaaab1ec500 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x9628AAF: ???
+==6676==    by 0xD0B1AEF: ???
+==6676==    by 0xD0B1AEF: ???
+==6676==    by 0x9755DCF: ???
+==6676==    by 0xCCF045F: ???
+==6676==    by 0x7FEFFE3EF: ???
+==6676==    by 0x7FEFFE1FF: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE55F: ???
+==6676==    by 0x7FEFFE54F: ???
+==6676==  Address 0x2aaaab1ec238 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFCBEF: ???
+==6676==    by 0x67: ???
+==6676==    by 0x7FEFFCCEF: ???
+==6676==  Address 0x2aaaaaee0570 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6803010000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==  Address 0x2aaaaaee2570 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA92D340: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC5C0CDF: ???
+==6676==    by 0x9658BBF: ???
+==6676==    by 0x9658BBF: ???
+==6676==    by 0x97967CF: ???
+==6676==    by 0xCCF045F: ???
+==6676==    by 0x7FEFFCD7F: ???
+==6676==    by 0x7FEFFCB8F: ???
+==6676==    by 0xAA8BD18: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFCEEF: ???
+==6676==    by 0x7FEFFCEDF: ???
+==6676==  Address 0x2aaaab1ec518 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C5A6E4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFFFFFFFFFFE: ???
+==6676==    by 0xFFFFFFFFFFFFFFFE: ???
+==6676==    by 0xC07FFFFFFEFFEE5F: ???
+==6676==    by 0xC11E037: ???
+==6676==    by 0xC1200F3: ???
+==6676==    by 0xC11D2CF: ???
+==6676==    by 0xC11D2CF: ???
+==6676==    by 0x9C51BF0: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x4C2FD30: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD7FFFFFFFF: ???
+==6676==    by 0x7FEFFC0BF: ???
+==6676==    by 0x60041900000037: ???
+==6676==    by 0x6: ???
+==6676==    by 0x7FEFFC11F: ???
+==6676==    by 0xB276FD8: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6804190000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0x62600000027: ???
+==6676==    by 0x35: ???
+==6676==  Address 0x2aaaaabe05eb is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD7FFFFFFFF: ???
+==6676==    by 0x7FEFFC0BF: ???
+==6676==    by 0x60041900000037: ???
+==6676==    by 0x6: ???
+==6676==    by 0x7FEFFC11F: ???
+==6676==    by 0xB276FD8: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6804190000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0x62600000027: ???
+==6676==    by 0x35: ???
+==6676==  Address 0x2aaaaabe05e0 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51E6: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x40000000000: ???
+==6676==    by 0x1000002FF: ???
+==6676==  Address 0x2aaaab3ec000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x40000000000: ???
+==6676==    by 0x1000002FF: ???
+==6676==  Address 0x2aaaab3ec010 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x40000000000: ???
+==6676==    by 0x1000002FF: ???
+==6676==  Address 0x2aaaab3ec020 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51F4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x40000000000: ???
+==6676==    by 0x1000002FF: ???
+==6676==  Address 0x2aaaab3ec030 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A520D: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x40000000000: ???
+==6676==    by 0x1000002FF: ???
+==6676==  Address 0x2aaaab3ec040 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5212: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x40000000000: ???
+==6676==    by 0x1000002FF: ???
+==6676==  Address 0x2aaaab3ec050 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5217: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x40000000000: ???
+==6676==    by 0x1000002FF: ???
+==6676==  Address 0x2aaaab3ec060 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A521C: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x40000000000: ???
+==6676==    by 0x1000002FF: ???
+==6676==  Address 0x2aaaab3ec070 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x4C2FD30: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26DE07: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==  Address 0x2aaaab1eb343 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A53FD: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC800000000: ???
+==6676==    by 0x100000095: ???
+==6676==  Address 0x2aaaab1ec000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5401: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC800000000: ???
+==6676==    by 0x100000095: ???
+==6676==  Address 0x2aaaab1ec010 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5406: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC800000000: ???
+==6676==    by 0x100000095: ???
+==6676==  Address 0x2aaaab1ec020 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A540B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC800000000: ???
+==6676==    by 0x100000095: ???
+==6676==  Address 0x2aaaab1ec030 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5424: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC800000000: ???
+==6676==    by 0x100000095: ???
+==6676==  Address 0x2aaaab1ec040 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5429: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC800000000: ???
+==6676==    by 0x100000095: ???
+==6676==  Address 0x2aaaab1ec050 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A542E: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC800000000: ???
+==6676==    by 0x100000095: ???
+==6676==  Address 0x2aaaab1ec060 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5433: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC800000000: ???
+==6676==    by 0x100000095: ???
+==6676==  Address 0x2aaaab1ec070 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0xB0A5454: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC800000000: ???
+==6676==    by 0x100000095: ???
+==6676==  Address 0x2aaaab1ec300 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26D525: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x808080809080808: ???
+==6676==    by 0x7FEFFE97F: ???
+==6676==    by 0x7FEFFEB4F: ???
+==6676==    by 0x700000003: ???
+==6676==    by 0x5040403FFFFFFFF: ???
+==6676==    by 0xB0E0A0907: ???
+==6676==    by 0x9090B0A0A0B0AFF: ???
+==6676==    by 0x505060607070807: ???
+==6676==    by 0x303040304040403: ???
+==6676==    by 0x105030402: ???
+==6676==  Address 0x2aaaaacd1570 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51E6: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8000000000: ???
+==6676==    by 0x10000007F: ???
+==6676==  Address 0x2aaaab211800 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8000000000: ???
+==6676==    by 0x10000007F: ???
+==6676==  Address 0x2aaaab211810 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8000000000: ???
+==6676==    by 0x10000007F: ???
+==6676==  Address 0x2aaaab211820 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51F4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8000000000: ???
+==6676==    by 0x10000007F: ???
+==6676==  Address 0x2aaaab211830 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A520D: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8000000000: ???
+==6676==    by 0x10000007F: ???
+==6676==  Address 0x2aaaab211840 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5212: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8000000000: ???
+==6676==    by 0x10000007F: ???
+==6676==  Address 0x2aaaab211850 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== 
+==6676== More than 100 errors detected.  Subsequent errors
+==6676== will still be recorded, but in less detail than before.
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5217: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8000000000: ???
+==6676==    by 0x10000007F: ???
+==6676==  Address 0x2aaaab211860 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A521C: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8000000000: ???
+==6676==    by 0x10000007F: ???
+==6676==  Address 0x2aaaab211870 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51E6: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab271800 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab271810 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab271820 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51F4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab271830 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A520D: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab271840 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5212: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab271850 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5217: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab271860 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A521C: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab271870 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB0A5256: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab271d20 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x4C2FD30: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB0A52B2: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab27bd3b is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB0A52B2: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab27bd30 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 2
+==6676==    at 0x4C2FDAE: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB0A52B2: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab27be3a is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C5A6E4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x700000000: ???
+==6676==    by 0xD143557: ???
+==6676==    by 0xD2EC53F: ???
+==6676==    by 0xC11E037: ???
+==6676==    by 0xC1200F3: ???
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9DA1667: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x4E38F67: ??? (in /usr/local/lib/libsfml-graphics.so.2.1)
+==6676==    by 0xD4A5D1F: ???
+==6676==    by 0xD4B799F: ???
+==6676==    by 0x6: ???
+==6676==    by 0xD8233B7: ???
+==6676==  Address 0x2aaaab3ec000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9DA1686: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x4E38F67: ??? (in /usr/local/lib/libsfml-graphics.so.2.1)
+==6676==    by 0xD4A5D1F: ???
+==6676==    by 0xD4B799F: ???
+==6676==    by 0x6: ???
+==6676==    by 0xD8233B7: ???
+==6676==    by 0x8033FFFFFFFFFFFF: ???
+==6676==    by 0x2: ???
+==6676==    by 0xA79F9B5: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6E4E147: ??? (in /usr/lib/fglrx/libGL.so.1.2)
+==6676==  Address 0x2aaaab3ec018 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab409000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab409004 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xA4CBBDE: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab468af8 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x4C2FD30: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB0A515F: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFC7: ???
+==6676==  Address 0x2aaaab27cd8b is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB0A515F: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFC7: ???
+==6676==  Address 0x2aaaab27cd80 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x3F7FFFFFFFFFFFFF: ???
+==6676==    by 0xCCF046F: ???
+==6676==    by 0x7FEFFFA53: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0x7FEFFFA57: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0x7FEFFFA4B: ???
+==6676==    by 0x800000013: ???
+==6676==  Address 0x2aaaab409050 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x3F7FFFFFFFFFFFFF: ???
+==6676==    by 0xCCF046F: ???
+==6676==    by 0x7FEFFFA67: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0x7FEFFFA57: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0x7FEFFFA4B: ???
+==6676==    by 0x800000013: ???
+==6676==  Address 0x2aaaab409054 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC449A3F: ???
+==6676==    by 0xD88301F: ???
+==6676==    by 0xC183AA7: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xC183AAB: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xC183A9F: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD539DFF: ???
+==6676==    by 0xD494737: ???
+==6676==    by 0xD49471F: ???
+==6676==  Address 0x2aaaab4090a0 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC449A3F: ???
+==6676==    by 0xD88301F: ???
+==6676==    by 0xC183ABB: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xC183AAB: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xC183A9F: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD539DFF: ???
+==6676==    by 0xD494737: ???
+==6676==    by 0xD49471F: ???
+==6676==  Address 0x2aaaab4090a4 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCD4A01F: ???
+==6676==    by 0xD86AE9F: ???
+==6676==    by 0xCB97E77: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xCB97E7B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xCB97E6F: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD539DFF: ???
+==6676==    by 0xD494737: ???
+==6676==    by 0xD49471F: ???
+==6676==  Address 0x2aaaab409640 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCD4A01F: ???
+==6676==    by 0xD86AE9F: ???
+==6676==    by 0xCB97E8B: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xCB97E7B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xCB97E6F: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD539DFF: ???
+==6676==    by 0xD494737: ???
+==6676==    by 0xD49471F: ???
+==6676==  Address 0x2aaaab409644 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x4C2FD30: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB0A5256: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab2b0c8b is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xAE0A574: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x17: ???
+==6676==    by 0x7FEFF9D7F: ???
+==6676==    by 0x1B: ???
+==6676==    by 0xD91A14F: ???
+==6676==    by 0xFFFFFFFE: ???
+==6676==    by 0xD91A16F: ???
+==6676==    by 0xD91A39F: ???
+==6676==    by 0xAE0D07B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x17: ???
+==6676==    by 0x7FEFF9DAF: ???
+==6676==    by 0x96B006B: ???
+==6676== 
+==6676== Source and destination overlap in strcpy(0x7feff99a4, 0x7feff99a4)
+==6676==    at 0x4C2D955: __GI_strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xAE17E06: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xBFE109F: ???
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A53FD: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x12000000000: ???
+==6676==    by 0x100000067: ???
+==6676==  Address 0x2aaaab4ec000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5401: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x12000000000: ???
+==6676==    by 0x100000067: ???
+==6676==  Address 0x2aaaab4ec010 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5406: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x12000000000: ???
+==6676==    by 0x100000067: ???
+==6676==  Address 0x2aaaab4ec020 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A540B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x12000000000: ???
+==6676==    by 0x100000067: ???
+==6676==  Address 0x2aaaab4ec030 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5424: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x12000000000: ???
+==6676==    by 0x100000067: ???
+==6676==  Address 0x2aaaab4ec040 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5429: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x12000000000: ???
+==6676==    by 0x100000067: ???
+==6676==  Address 0x2aaaab4ec050 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A542E: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x12000000000: ???
+==6676==    by 0x100000067: ???
+==6676==  Address 0x2aaaab4ec060 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5433: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x12000000000: ???
+==6676==    by 0x100000067: ???
+==6676==  Address 0x2aaaab4ec070 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x4C2FD55: __GI_memmove (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB26165F: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==  Address 0x2aaaab1b4ea8 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C5A6E4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x43C0000043FFFFFF: ???
+==6676==    by 0xC34E887: ???
+==6676==    by 0x9601CCF: ???
+==6676==    by 0xD3860F7: ???
+==6676==    by 0xD3881B3: ???
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9DA1667: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD77C487: ???
+==6676==    by 0x13E4376F: ???
+==6676==    by 0xCB0DC6F: ???
+==6676==    by 0x6: ???
+==6676==    by 0x149A66B7: ???
+==6676==  Address 0x2aaaab6ec000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9DA1686: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD77C487: ???
+==6676==    by 0x13E4376F: ???
+==6676==    by 0xCB0DC6F: ???
+==6676==    by 0x6: ???
+==6676==    by 0x149A66B7: ???
+==6676==    by 0x8033FFFFFFFFFFFF: ???
+==6676==    by 0x2: ???
+==6676==    by 0xA79F9B5: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFFF: ???
+==6676==  Address 0x2aaaab6ec018 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCB0DC6F: ???
+==6676==  Address 0x2aaaab709050 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCB0DC6F: ???
+==6676==  Address 0x2aaaab709054 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC55B91F: ???
+==6676==    by 0xD76471F: ???
+==6676==    by 0xD8FB433: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xD8FB437: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD8FB42B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xC2AC10F: ???
+==6676==    by 0x144B9537: ???
+==6676==    by 0x144B951F: ???
+==6676==  Address 0x2aaaab7090a0 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC55B91F: ???
+==6676==    by 0xD76471F: ???
+==6676==    by 0xD8FB447: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xD8FB437: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD8FB42B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xC2AC10F: ???
+==6676==    by 0x144B9537: ???
+==6676==    by 0x144B951F: ???
+==6676==  Address 0x2aaaab7090a4 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x13E51B53: ???
+==6676==    by 0xC2AC10F: ???
+==6676==    by 0x144CE947: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0x144CE94B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0x144CE93F: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xC31A90F: ???
+==6676==  Address 0x2aaaab709280 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x13E51B53: ???
+==6676==    by 0xC2AC10F: ???
+==6676==    by 0x144CE95B: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0x144CE94B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0x144CE93F: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xC31A90F: ???
+==6676==  Address 0x2aaaab709284 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C37754: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x9C6A49C: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6BEC977: ???
+==6676==    by 0x6BEC42F: ???
+==6676==    by 0xD8FB487: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA710C58: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFF10F: ???
+==6676==    by 0xC2F27EF: ???
+==6676==    by 0xA79BD2B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFF: ??? (in /run/shm/pulse-shm-1692467910)
+==6676==    by 0xCCE82FF: ???
+==6676==    by 0xC8FFCC7: ???
+==6676==    by 0xD7A03FF: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA70FFFA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xA79C5A4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFF: ??? (in /run/shm/pulse-shm-1692467910)
+==6676==    by 0xCCE82FF: ???
+==6676==    by 0xC8FFCC7: ???
+==6676==    by 0xD7A03FF: ???
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9DA1667: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD90C00F: ???
+==6676==    by 0xD90C00F: ???
+==6676==    by 0xD3B612F: ???
+==6676==  Address 0x2aaaab7ec000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9DA1686: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD90C00F: ???
+==6676==    by 0xD90C00F: ???
+==6676==    by 0xD3B612F: ???
+==6676==  Address 0x2aaaab7ec018 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C5A6E4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x43400000437FFFFF: ???
+==6676==    by 0x9641AD7: ???
+==6676==    by 0x97ED03F: ???
+==6676==    by 0xCE268A7: ???
+==6676==    by 0xCE28963: ???
+==6676==    by 0xCE25B3F: ???
+==6676==    by 0xCE262C7: ???
+==6676==    by 0x9C25B30: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xBF303FF: ???
+==6676==    by 0xCE25B3F: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA710C58: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFF0EF: ???
+==6676==    by 0xCB3316F: ???
+==6676==    by 0xA79BD2B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFF: ??? (in /run/shm/pulse-shm-1692467910)
+==6676==    by 0x14B354FF: ???
+==6676==    by 0x14032997: ???
+==6676==    by 0x14C561AF: ???
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9DA1667: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC06DD6F: ???
+==6676==    by 0xC06DD6F: ???
+==6676==    by 0x14037DDF: ???
+==6676==  Address 0x2aaaab8ec000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9DA1686: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC06DD6F: ???
+==6676==    by 0xC06DD6F: ???
+==6676==    by 0x14037DDF: ???
+==6676==  Address 0x2aaaab8ec018 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA710C58: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFF09F: ???
+==6676==    by 0xBF706EF: ???
+==6676==    by 0xA79BD2B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFF: ??? (in /run/shm/pulse-shm-1692467910)
+==6676==    by 0x1400EA3F: ???
+==6676==    by 0xE3EB2A7: ???
+==6676==    by 0x148E4B5F: ???
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9DA1667: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x96F658F: ???
+==6676==    by 0x96F658F: ???
+==6676==    by 0x13E10AAF: ???
+==6676==  Address 0x2aaaab9ec000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9DA1686: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x96F658F: ???
+==6676==    by 0x96F658F: ???
+==6676==    by 0x13E10AAF: ???
+==6676==  Address 0x2aaaab9ec018 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0x9C5A6E4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x42C0000042FFFFFF: ???
+==6676==    by 0xD1EC2C7: ???
+==6676==    by 0xCF5816F: ???
+==6676==    by 0xCD9D097: ???
+==6676==    by 0xCD9F153: ???
+==6676==    by 0xCD9C32F: ???
+==6676==    by 0xCD9CAB7: ???
+==6676==    by 0x9C25B30: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD822A7F: ???
+==6676==    by 0xCD9C32F: ???
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9DA1667: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x14D2A237: ???
+==6676==    by 0xE2B581F: ???
+==6676==    by 0xD53FB7F: ???
+==6676==    by 0x4: ???
+==6676==    by 0x15426777: ???
+==6676==  Address 0x2aaaabaec000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9DA1686: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x14D2A237: ???
+==6676==    by 0xE2B581F: ???
+==6676==    by 0xD53FB7F: ???
+==6676==    by 0x4: ???
+==6676==    by 0x15426777: ???
+==6676==    by 0x8033FFFFFFFFFFFF: ???
+==6676==    by 0x2: ???
+==6676==    by 0xA79F7D7: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x3BAAAAAB3B7FFFFF: ???
+==6676==  Address 0x2aaaabaec018 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9DA1667: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x14B59F97: ???
+==6676==    by 0xE259E8F: ???
+==6676==    by 0xC2CA0BF: ???
+==6676==    by 0x4: ???
+==6676==    by 0x15766737: ???
+==6676==  Address 0x2aaaabbec000 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9DA1686: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x14B59F97: ???
+==6676==    by 0xE259E8F: ???
+==6676==    by 0xC2CA0BF: ???
+==6676==    by 0x4: ???
+==6676==    by 0x15766737: ???
+==6676==    by 0x8033FFFFFFFFFFFF: ???
+==6676==    by 0x2: ???
+==6676==    by 0xA79F7D7: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x3BAAAAAB3B7FFFFF: ???
+==6676==  Address 0x2aaaabbec018 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9DA1667: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x4000007: ??? (in /lib/x86_64-linux-gnu/ld-2.17.so)
+==6676==    by 0xD4A5D1F: ???
+==6676==    by 0xD4B799F: ???
+==6676==    by 0x4: ???
+==6676==    by 0xD8233B7: ???
+==6676==  Address 0x2aaaab3ec3ac is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFEECF: ???
+==6676==    by 0xBFCBE9F: ???
+==6676==    by 0x7FEFFFA57: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0x7FEFFFA4B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0x99D8AEF: ???
+==6676==    by 0xA4D71F2: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFEEEF: ???
+==6676==  Address 0x2aaaab441a90 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x9EAB979: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab441ad0 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCB13A0F: ???
+==6676==    by 0x5CBFF: ???
+==6676==    by 0xCB97E77: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xCB97E7B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xCB97E6F: ???
+==6676==    by 0x800000013: ???
+==6676==  Address 0x2aaaab441ae0 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCB13A0F: ???
+==6676==    by 0x5CBFF: ???
+==6676==    by 0xCB97E8B: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xCB97E7B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xCB97E6F: ???
+==6676==    by 0x800000013: ???
+==6676==  Address 0x2aaaab441ae4 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51E6: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFDE3F: ???
+==6676==    by 0xB276FD8: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6804190000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0xD0416FF: ???
+==6676==  Address 0x2aaaab2baf00 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFDE3F: ???
+==6676==    by 0xB276FD8: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6804190000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0xD0416FF: ???
+==6676==  Address 0x2aaaab2baf10 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFDE3F: ???
+==6676==    by 0xB276FD8: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6804190000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0xD0416FF: ???
+==6676==  Address 0x2aaaab2baf20 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51F4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFDE3F: ???
+==6676==    by 0xB276FD8: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6804190000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0xD0416FF: ???
+==6676==  Address 0x2aaaab2baf30 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A520D: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFDE3F: ???
+==6676==    by 0xB276FD8: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6804190000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0xD0416FF: ???
+==6676==  Address 0x2aaaab2baf40 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5212: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFDE3F: ???
+==6676==    by 0xB276FD8: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6804190000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0xD0416FF: ???
+==6676==  Address 0x2aaaab2baf50 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5217: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFDE3F: ???
+==6676==    by 0xB276FD8: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6804190000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0xD0416FF: ???
+==6676==  Address 0x2aaaab2baf60 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A521C: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFDE3F: ???
+==6676==    by 0xB276FD8: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6804190000000F: ???
+==6676==    by 0x2DEACFFFF: ???
+==6676==    by 0xD0416FF: ???
+==6676==  Address 0x2aaaab2baf70 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51E6: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x10000000000: ???
+==6676==    by 0x1000000FF: ???
+==6676==  Address 0x2aaaab308e00 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x10000000000: ???
+==6676==    by 0x1000000FF: ???
+==6676==  Address 0x2aaaab308e10 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x10000000000: ???
+==6676==    by 0x1000000FF: ???
+==6676==  Address 0x2aaaab308e20 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51F4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x10000000000: ???
+==6676==    by 0x1000000FF: ???
+==6676==  Address 0x2aaaab308e30 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A520D: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x10000000000: ???
+==6676==    by 0x1000000FF: ???
+==6676==  Address 0x2aaaab308e40 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5212: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x10000000000: ???
+==6676==    by 0x1000000FF: ???
+==6676==  Address 0x2aaaab308e50 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5217: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x10000000000: ???
+==6676==    by 0x1000000FF: ???
+==6676==  Address 0x2aaaab308e60 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A521C: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x10000000000: ???
+==6676==    by 0x1000000FF: ???
+==6676==  Address 0x2aaaab308e70 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51E6: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==  Address 0x2aaaab348e00 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==  Address 0x2aaaab348e10 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==  Address 0x2aaaab348e20 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51F4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==  Address 0x2aaaab348e30 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A520D: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==  Address 0x2aaaab348e40 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5212: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==  Address 0x2aaaab348e50 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5217: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==  Address 0x2aaaab348e60 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A521C: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==  Address 0x2aaaab348e70 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A53FD: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==    by 0x7F: ???
+==6676==  Address 0x2aaaab34d600 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5401: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==    by 0x7F: ???
+==6676==  Address 0x2aaaab34d610 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5406: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==    by 0x7F: ???
+==6676==  Address 0x2aaaab34d620 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A540B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==    by 0x7F: ???
+==6676==  Address 0x2aaaab34d630 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5424: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==    by 0x7F: ???
+==6676==  Address 0x2aaaab34d640 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5429: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==    by 0x7F: ???
+==6676==  Address 0x2aaaab34d650 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A542E: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==    by 0x7F: ???
+==6676==  Address 0x2aaaab34d660 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5433: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x11: ???
+==6676==    by 0x100000700000028: ???
+==6676==    by 0x700040100: ???
+==6676==    by 0x7F: ???
+==6676==  Address 0x2aaaab34d670 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51E6: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0x400001000000: ???
+==6676==    by 0xFF: ???
+==6676==    by 0x7FEFFE1BB: ???
+==6676==    by 0xD25E79F: ???
+==6676==  Address 0x2aaaab350700 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0x400001000000: ???
+==6676==    by 0xFF: ???
+==6676==    by 0x7FEFFE1BB: ???
+==6676==    by 0xD25E79F: ???
+==6676==  Address 0x2aaaab350710 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51EF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0x400001000000: ???
+==6676==    by 0xFF: ???
+==6676==    by 0x7FEFFE1BB: ???
+==6676==    by 0xD25E79F: ???
+==6676==  Address 0x2aaaab350720 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A51F4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0x400001000000: ???
+==6676==    by 0xFF: ???
+==6676==    by 0x7FEFFE1BB: ???
+==6676==    by 0xD25E79F: ???
+==6676==  Address 0x2aaaab350730 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A520D: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0x400001000000: ???
+==6676==    by 0xFF: ???
+==6676==    by 0x7FEFFE1BB: ???
+==6676==    by 0xD25E79F: ???
+==6676==  Address 0x2aaaab350740 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5212: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0x400001000000: ???
+==6676==    by 0xFF: ???
+==6676==    by 0x7FEFFE1BB: ???
+==6676==    by 0xD25E79F: ???
+==6676==  Address 0x2aaaab350750 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A5217: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0x400001000000: ???
+==6676==    by 0xFF: ???
+==6676==    by 0x7FEFFE1BB: ???
+==6676==    by 0xD25E79F: ???
+==6676==  Address 0x2aaaab350760 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0xB0A521C: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0x400001000000: ???
+==6676==    by 0xFF: ???
+==6676==    by 0x7FEFFE1BB: ???
+==6676==    by 0xD25E79F: ???
+==6676==  Address 0x2aaaab350770 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x30003FF: ???
+==6676==    by 0x54BEE: ???
+==6676==    by 0xD8FB433: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xD8FB437: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD8FB42B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD77C8B7: ???
+==6676==  Address 0x2aaaab709370 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x30003FF: ???
+==6676==    by 0x54BEE: ???
+==6676==    by 0xD8FB447: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xD8FB437: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD8FB42B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD77C8B7: ???
+==6676==  Address 0x2aaaab709374 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA7651CF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7: ???
+==6676==    by 0x10AA781D0: ???
+==6676==    by 0xD539DFF: ???
+==6676==    by 0x4: ???
+==6676==    by 0xD127AEF: ???
+==6676==    by 0xD4A5D1F: ???
+==6676==    by 0xD127AEF: ???
+==6676==    by 0xA7B3E07: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9DA1667: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab3ec3cc is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6001000160010000: ???
+==6676==    by 0xAA490FC: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD65A8F7: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xD65A8EF: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD86AEB7: ???
+==6676==    by 0xCCF045F: ???
+==6676==  Address 0x2aaaab441cb8 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6001000160010000: ???
+==6676==    by 0xAA490FC: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD65A90B: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0xD65A8EF: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD86AEB7: ???
+==6676==    by 0xCCF045F: ???
+==6676==  Address 0x2aaaab441cbc is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6F: ???
+==6676==  Address 0x2aaaab441d10 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6F: ???
+==6676==  Address 0x2aaaab441d14 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x17: ???
+==6676==    by 0x9DBC598: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFFA53: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0x7FEFFFA57: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0x7FEFFFA4B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD539DFF: ???
+==6676==    by 0xD494737: ???
+==6676==    by 0xD49471F: ???
+==6676==  Address 0x2aaaab442030 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x17: ???
+==6676==    by 0x9DBC598: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFFA67: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0x7FEFFFA57: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0x7FEFFFA4B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD539DFF: ???
+==6676==    by 0xD494737: ???
+==6676==    by 0xD49471F: ???
+==6676==  Address 0x2aaaab442034 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 1
+==6676==    at 0x9EAB979: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x3: ???
+==6676==    by 0xA76464C: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==  Address 0x2aaaab4427f0 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==  Address 0x2aaaab468b00 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==  Address 0x2aaaab468b04 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 4
+==6676==    at 0x9E250FA: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD4B799F: ???
+==6676==    by 0xD494737: ???
+==6676==    by 0x7FEFFFA53: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0x7FEFFFA57: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0x7FEFFFA4B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD4B414F: ???
+==6676==    by 0xD86AEB7: ???
+==6676==    by 0xD875B3F: ???
+==6676==  Address 0x2aaaab468e20 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Invalid write of size 8
+==6676==    at 0x9E250DF: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD4B799F: ???
+==6676==    by 0xD494737: ???
+==6676==    by 0x7FEFFFA67: ???
+==6676==    by 0x400000013: ???
+==6676==    by 0x7FEFFFA57: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0x7FEFFFA4B: ???
+==6676==    by 0x800000013: ???
+==6676==    by 0xD4B414F: ???
+==6676==    by 0xD86AEB7: ???
+==6676==    by 0xD875B3F: ???
+==6676==  Address 0x2aaaab468e24 is not stack'd, malloc'd or (recently) free'd
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA4D71CB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x15D5C3BF: ???
+==6676==    by 0xD74BFEF: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA4D71CB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x15BB61BF: ???
+==6676==    by 0xC3001AF: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA4D71CB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x15A1C4BF: ???
+==6676==    by 0x97757CF: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA4D71CB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x15BFE2FF: ???
+==6676==    by 0xBF8574F: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA4D71CB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x152A607F: ???
+==6676==    by 0xBF363EF: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA4D71CB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xE2FF97F: ???
+==6676==    by 0xE2FF97F: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA4D71CB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x14FA94FF: ???
+==6676==    by 0x9639EAF: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA4D71CB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x150F71BF: ???
+==6676==    by 0x150F71BF: ???
+==6676== 
+==6676== Conditional jump or move depends on uninitialised value(s)
+==6676==    at 0xA4D71CB: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x13EA383F: ???
+==6676==    by 0x13EA383F: ???
+==6676== 
+==6676== 
+==6676== HEAP SUMMARY:
+==6676==     in use at exit: 247,704 bytes in 635 blocks
+==6676==   total heap usage: 191,084 allocs, 190,449 frees, 584,827,957 bytes allocated
+==6676== 
+==6676== 16 bytes in 1 blocks are definitely lost in loss record 16 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1F: ???
+==6676==    by 0xAA846A6: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1000100000003: ???
+==6676==    by 0x9669FDF: ???
+==6676==    by 0x1F: ???
+==6676==    by 0x7FEFFE74F: ???
+==6676==    by 0x7FEFFE807: ???
+==6676==    by 0x100000008085D70: ???
+==6676==    by 0x985EDAF: ???
+==6676==    by 0x8085EA9: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==6676== 
+==6676== 16 bytes in 1 blocks are definitely lost in loss record 17 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x96A74AF: ???
+==6676==    by 0xAA8234D: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 102 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC239D2F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 103 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC52897F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 104 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD8A0F7F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 105 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC23595F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 106 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC5CF27F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 107 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC6296CF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 108 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC7C996F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 109 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCA4F3AF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 110 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCB0B3CF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 111 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD1C21BF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 112 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x960AD3F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 113 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x96399CF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 114 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xBF69BEF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 115 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD79B1AF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 116 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xBFCDE0F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 117 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCABFCFF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 118 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC61A36F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 119 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCDEF6DF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 120 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xDB5CDAF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 121 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x978CD9F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 122 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC5921AF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 123 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC3973CF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 124 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC5B975F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 125 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC30ED3F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 126 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xE2E984F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 127 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCDAA3EF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 128 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCF9BDCF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 129 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x973877F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 130 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCF7DB5F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 131 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xBFCDACF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 132 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x985E96F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 133 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x98772DF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 134 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD2D3B0F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 135 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x99DF78F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 136 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD14508F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 137 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCCBAE0F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 138 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC27B9BF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 139 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x963B3DF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 140 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD31A03F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 141 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD4694BF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 142 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x13DFB66F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 143 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xBF842EF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 144 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCFB411F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 145 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD0AEB0F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 146 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC62D80F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 147 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC30E1BF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 148 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC5104FF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 149 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x14C741AF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 150 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD05F14F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 151 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x964210F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 152 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xBF2103F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 153 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x96291FF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 154 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD1D094F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 155 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC8EBB5F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 156 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x14D8ED9F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 157 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC6F61BF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 158 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD7B812F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 159 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD5B899F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 160 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC23758F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 161 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC861DDF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 162 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC477DDF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 163 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD69E39F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 164 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x157639EF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 136 bytes in 1 blocks are definitely lost in loss record 165 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x97F3D5F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 152 (24 direct, 128 indirect) bytes in 1 blocks are definitely lost in loss record 167 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xB8C263F: ???
+==6676==    by 0x9D55AC4: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x700003037: ???
+==6676==    by 0x8085D70: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==6676==    by 0xC0D3B1F: ???
+==6676==    by 0xC0D3B9F: ???
+==6676== 
+==6676== 272 bytes in 2 blocks are definitely lost in loss record 176 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD22977F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 272 bytes in 2 blocks are definitely lost in loss record 177 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xC89591F: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 272 bytes in 2 blocks are definitely lost in loss record 178 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF488: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xCB7FFFF: ???
+==6676==    by 0xAB8089B: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 1,400 bytes in 1 blocks are possibly lost in loss record 194 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x967E497: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x39: ???
+==6676==    by 0x1F: ???
+==6676==    by 0x7FEFF88C7: ???
+==6676==    by 0xB9D29B7: ???
+==6676==    by 0x7FEFF8B1F: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFF87DF: ???
+==6676==    by 0x14FEFF89FF: ???
+==6676== 
+==6676== 2,632 bytes in 1 blocks are possibly lost in loss record 201 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFF8DFF: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x977697F: ???
+==6676==    by 0x17: ???
+==6676==    by 0x7FEFF8DF7: ???
+==6676==    by 0xB9D29AF: ???
+==6676==    by 0x15: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 3,984 bytes in 1 blocks are possibly lost in loss record 203 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xA: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xA: ???
+==6676==    by 0x3F: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29D7: ???
+==6676==    by 0x973FE87: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x143802866F: ???
+==6676== 
+==6676== 4,064 bytes in 1 blocks are possibly lost in loss record 204 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFF8CCF: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 4,352 bytes in 1 blocks are possibly lost in loss record 212 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFF906F: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFF905F: ???
+==6676==    by 0x17: ???
+==6676==    by 0x7FEFF8FF7: ???
+==6676==    by 0xB9D29AF: ???
+==6676==    by 0x14: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1D: ???
+==6676==    by 0x14FEFF917F: ???
+==6676== 
+==6676== 4,400 bytes in 1 blocks are possibly lost in loss record 213 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xE: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xE: ???
+==6676==    by 0x3F: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29D7: ???
+==6676==    by 0x9776187: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x1400000017: ???
+==6676== 
+==6676== 4,672 bytes in 1 blocks are possibly lost in loss record 214 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0x3F: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29D7: ???
+==6676==    by 0x977822F: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x1400000017: ???
+==6676== 
+==6676== 4,944 bytes in 1 blocks are possibly lost in loss record 215 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x96A7A6F: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x96A7A86: ???
+==6676==    by 0x1F: ???
+==6676==    by 0x7FEFF8CF7: ???
+==6676==    by 0xB9D29B7: ???
+==6676==    by 0x18: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x96A7A6F: ???
+==6676==    by 0x13FFFFFFFF: ???
+==6676== 
+==6676== 4,968 bytes in 1 blocks are possibly lost in loss record 216 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0x3F: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29D7: ???
+==6676==    by 0x97761DF: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x1400000017: ???
+==6676== 
+==6676== 5,272 bytes in 1 blocks are possibly lost in loss record 217 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0x3F: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29D7: ???
+==6676==    by 0x977B12F: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x1400000017: ???
+==6676== 
+==6676== 5,328 bytes in 1 blocks are possibly lost in loss record 218 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x967E497: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x39: ???
+==6676==    by 0x7F: ???
+==6676==    by 0x7FEFF88C7: ???
+==6676==    by 0xB9D2A17: ???
+==6676==    by 0x7FEFF8B1F: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFF87DF: ???
+==6676==    by 0x14FEFF89FF: ???
+==6676== 
+==6676== 5,608 bytes in 1 blocks are possibly lost in loss record 219 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6: ???
+==6676==    by 0x3F: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29D7: ???
+==6676==    by 0x978111F: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x140000001F: ???
+==6676== 
+==6676== 6,536 bytes in 1 blocks are possibly lost in loss record 220 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0x3F: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29D7: ???
+==6676==    by 0x978BC7F: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x1400000017: ???
+==6676== 
+==6676== 6,944 bytes in 1 blocks are possibly lost in loss record 221 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0x3F: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29D7: ???
+==6676==    by 0x978E157: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x1400000017: ???
+==6676== 
+==6676== 7,800 bytes in 1 blocks are possibly lost in loss record 222 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xB1FFFFFFFFF: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 8,032 bytes in 2 blocks are possibly lost in loss record 223 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 8,336 bytes in 1 blocks are possibly lost in loss record 225 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0x57: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29EF: ???
+==6676==    by 0xFF: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x143802866F: ???
+==6676== 
+==6676== 8,344 bytes in 1 blocks are possibly lost in loss record 226 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFE97F: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xFFFFFFFF: ???
+==6676==    by 0x2F: ???
+==6676==    by 0x7FEFFE8AF: ???
+==6676==    by 0xB9D29C7: ???
+==6676==    by 0x7FEFFE9EF: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676== 
+==6676== 8,456 bytes in 1 blocks are possibly lost in loss record 227 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0x3F: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29D7: ???
+==6676==    by 0x979207F: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x143802866F: ???
+==6676== 
+==6676== 8,544 bytes in 1 blocks are possibly lost in loss record 228 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xBEE6E6F: ???
+==6676==    by 0x27: ???
+==6676==    by 0x7FEFFE82F: ???
+==6676==    by 0xB9D29BF: ???
+==6676==    by 0x7FEFFE96F: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x2097: ???
+==6676==    by 0x13FFFFFFFF: ???
+==6676== 
+==6676== 8,856 bytes in 1 blocks are possibly lost in loss record 229 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x8: ???
+==6676==    by 0x57: ???
+==6676==    by 0x7FEFF90CF: ???
+==6676==    by 0xB9D29EF: ???
+==6676==    by 0xFF: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x1101: ???
+==6676==    by 0x140000001F: ???
+==6676== 
+==6676== 10,848 bytes in 1 blocks are possibly lost in loss record 231 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xD91375F: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x6004130000001F: ???
+==6676==    by 0x47: ???
+==6676==    by 0x7FEFF9C17: ???
+==6676==    by 0xB9D29DF: ???
+==6676==    by 0xB: ???
+==6676==    by 0xB1FEC89: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFF9CAF: ???
+==6676==    by 0x140D914797: ???
+==6676== 
+==6676== 11,520 bytes in 1 blocks are possibly lost in loss record 232 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFCF07: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xE4395BF: ???
+==6676==    by 0x47: ???
+==6676==    by 0x7FEFFCED7: ???
+==6676==    by 0xB9D29DF: ???
+==6676== 
+==6676== 12,240 bytes in 1 blocks are possibly lost in loss record 233 of 233
+==6676==    at 0x4C2CD7B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6676==    by 0xB1FF478: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0x7FEFFCF07: ???
+==6676==    by 0xB1FEB91: ??? (in /usr/lib/fglrx/dri/fglrx_dri.so)
+==6676==    by 0xE5161EF: ???
+==6676==    by 0x47: ???
+==6676==    by 0x7FEFFCED7: ???
+==6676==    by 0xB9D29DF: ???
+==6676== 
+==6676== LEAK SUMMARY:
+==6676==    definitely lost: 9,576 bytes in 73 blocks
+==6676==    indirectly lost: 128 bytes in 1 blocks
+==6676==      possibly lost: 158,080 bytes in 25 blocks
+==6676==    still reachable: 79,920 bytes in 536 blocks
+==6676==         suppressed: 0 bytes in 0 blocks
+==6676== Reachable blocks (those to which a pointer was found) are not shown.
+==6676== To see them, rerun with: --leak-check=full --show-reachable=yes
+==6676== 
+==6676== For counts of detected and suppressed errors, rerun with: -v
+==6676== Use --track-origins=yes to see where uninitialised values come from
+==6676== ERROR SUMMARY: 7157476 errors from 329 contexts (suppressed: 5 from 3)

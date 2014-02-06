@@ -20,7 +20,3 @@ TEST(AircraftTests, testEagleLoadedByTextureID) {
     ASSERT_EQ(8, sizeof(leader));
 }
  
-int main(int argc, char **argv) {
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

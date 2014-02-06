@@ -28,8 +28,3 @@ TEST(GameTests, testPlayerMovements){
     
     ASSERT_EQ(-100.f, result);
 }
-  
-int main(int argc, char **argv) {
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

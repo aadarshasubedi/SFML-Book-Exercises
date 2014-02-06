@@ -5,7 +5,9 @@
       <df name="src">
         <df name="tests">
           <in>AircraftTests.cpp</in>
+          <in>ApplicationTests.cpp</in>
           <in>ResourceTests.cpp</in>
+          <in>TestMain.cpp</in>
         </df>
         <in>Aircraft.cpp</in>
         <in>Animation.cpp</in>
@@ -243,9 +245,13 @@
         <ccTool>
         </ccTool>
       </item>
+      <item path="src/tests/ApplicationTests.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/tests/ResourceTests.cpp" ex="false" tool="1" flavor2="4">
         <ccTool>
         </ccTool>
+      </item>
+      <item path="src/tests/TestMain.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>
