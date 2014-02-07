@@ -17,6 +17,7 @@
       <df name="src">
         <df name="tests">
           <in>AircraftTests.cpp</in>
+          <in>AnimationTests.cpp</in>
           <in>ApplicationTests.cpp</in>
           <in>GameTests.cpp</in>
           <in>ResourceTests.cpp</in>

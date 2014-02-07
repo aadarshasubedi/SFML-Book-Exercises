@@ -7,5 +7,9 @@ TEST(ApplicationTests, testApplicationCreated) {
     ASSERT_NE(nullptr, app);    
     delete app;
 }
- 
 
+TEST(DISABLE_ApplicationTests, testRunningApplication){
+    auto app = new Application();
+    ASSERT_DEATH(app->run(), "");
+    delete app;
+}

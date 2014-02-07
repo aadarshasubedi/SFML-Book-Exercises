@@ -57,6 +57,7 @@ clean:
 #TESTS #########################################################################
 # Testing iteration is make clean, make game-tests, ./bin/GameTests
 TESTS_SOURCES = src/tests/TestMain.cpp  src/tests/ApplicationTests.cpp \
+    src/tests/AnimationTests.cpp \
     src/Aircraft.cpp src/Animation.cpp src/Application.cpp \
     src/BloomEffect.cpp src/Button.cpp src/Command.cpp src/CommandQueue.cpp \
     src/Component.cpp src/Container.cpp src/DataTables.cpp src/Entity.cpp \
