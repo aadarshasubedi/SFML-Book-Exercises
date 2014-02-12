@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-#include "../Application.hpp"
+#include "Mocks.hpp"
 
 TEST(ApplicationTests, testApplicationCreated) { 
     std::unique_ptr<Application> app(new Application());

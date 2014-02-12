@@ -19,7 +19,10 @@
           <in>AircraftTests.cpp</in>
           <in>AnimationTests.cpp</in>
           <in>ApplicationTests.cpp</in>
+          <in>BloomEffectTests.cpp</in>
+          <in>ButtonTests.cpp</in>
           <in>GameTests.cpp</in>
+          <in>Mocks.hpp</in>
           <in>ResourceTests.cpp</in>
           <in>TestMain.cpp</in>
         </df>

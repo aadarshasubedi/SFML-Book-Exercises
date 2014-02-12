@@ -6,9 +6,11 @@
 
 #include <gtest/gtest.h>
 
+
+#include "Mocks.hpp"
+
 #include "../ResourceHolder.hpp"
 #include "../ResourceIdentifiers.hpp"
-#include "../Aircraft.hpp"
 
 class AircraftTests: public testing::Test {
     public:

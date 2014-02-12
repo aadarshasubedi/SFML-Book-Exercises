@@ -26,12 +26,18 @@
     cd sfml && make
     sudo -s && make install && make clean
 
-### Writing unit tests w/Google-Test (just have to run tests make clean, make <test name>, and run execute test binaries at command-line
+### Unit testing supports w/Google-Test 
     sudo apt-get install libgtest-dev
     cd /usr/src/gtest
     sudo cmake CMakeLists.txt
     sudo make
     sudo cp *.a /usr/lib  # copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
+
+    #download Google Mock (http://code.google.com/p/googlemock/downloads/list) and extract contents to /usr/src
+    cd /usr/src/gmock*
+    sudo cmake CMakeLists.txt
+    sudo make
+    sudo cp *.a /usr/lib    
 
 [1]: http://www.packtpub.com/sfml-game-development/book
 [2]: http://www.sfml-dev.org/tutorials/2.0/compile-with-cmake.php

@@ -58,19 +58,9 @@ clean:
 # Testing iteration is make clean, make game-tests, ./bin/GameTests
 TESTS_SOURCES = src/tests/TestMain.cpp  src/tests/ApplicationTests.cpp \
     src/tests/AnimationTests.cpp src/tests/AircraftTests.cpp \
-    src/tests/BloomEffectTests.cpp \
-    src/Aircraft.cpp src/Animation.cpp src/Application.cpp \
-    src/BloomEffect.cpp src/Button.cpp src/Command.cpp src/CommandQueue.cpp \
-    src/Component.cpp src/Container.cpp src/DataTables.cpp src/Entity.cpp \
-    src/EmitterNode.cpp src/Entity.cpp src/GameOverState.cpp src/GameServer.cpp \
-    src/GameState.cpp src/KeyBinding.cpp src/Label.cpp src/MenuState.cpp \
-    src/MultiplayerGameState.cpp src/MusicPlayer.cpp src/NetworkNode.cpp \
-    src/ParticleNode.cpp src/PauseState.cpp src/Pickup.cpp src/Player.cpp \
-    src/PostEffect.cpp src/Projectile.cpp src/SceneNode.cpp src/SettingsState.cpp \
-    src/SoundNode.cpp src/SoundPlayer.cpp src/SpriteNode.cpp src/State.cpp \
-    src/StateStack.cpp src/TextNode.cpp src/TitleState.cpp src/Utility.cpp src/World.cpp
+    src/tests/BloomEffectTests.cpp src/tests/ButtonTests.cpp 
 
 game-tests: $(TESTS_SOURCES:.cpp=.o)
-	$(CXX) $^ $(LDFLAGS) -lgtest -pthread -o bin/GameTests	
+	$(CXX) $^ $(LDFLAGS) -lgtest -lgmock -pthread -o bin/GameTests	
 
 

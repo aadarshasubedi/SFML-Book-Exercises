@@ -4,11 +4,11 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
+
 #include <gtest/gtest.h>
 
+#include "Mocks.hpp"
 #include "../ResourceHolder.hpp"
-#include "../Aircraft.hpp"
-#include "../Animation.hpp"
 
 class AnimationTests: public testing::Test {
     public:

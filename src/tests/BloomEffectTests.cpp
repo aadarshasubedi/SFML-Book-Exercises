@@ -4,7 +4,7 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
-#include "../BloomEffect.hpp"
+#include "Mocks.hpp"
 #include "../State.hpp"
 
 TEST(BloomEffectTests, testBloomEffectCreated) { 
@@ -18,11 +18,7 @@ TEST(BloomEffectTests, testApply){
     input->create(output->getSize().x, output->getSize().y);
     
     std::unique_ptr<BloomEffect> effect(new BloomEffect());
-    effect->apply(*input, *output);
-    
-    
-    
-    
+    effect->apply(*input, *output);    
 }
 
 
