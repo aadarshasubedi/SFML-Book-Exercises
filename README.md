@@ -39,5 +39,10 @@
     sudo make
     sudo cp *.a /usr/lib    
 
+### Current TODO list: 
+    * Write tests to get a better understanding of the code and techniques.  I'll leave them in the repo.
+    * Create makefiles for other OSes.
+    * Fix network code.  Must have hosed it during code cleanup after finishing chapter 10 of the book.
+
 [1]: http://www.packtpub.com/sfml-game-development/book
 [2]: http://www.sfml-dev.org/tutorials/2.0/compile-with-cmake.php
